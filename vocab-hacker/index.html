@@ -6826,18 +6826,19 @@
     touchActive = false;
     const dx = x - touchStartX;
     const dy = y - touchStartY;
-    const flick = Date.now() - touchStartAt < 600;
-    const longSwipe = Math.abs(dy) > 120;
+    const flick = Date.now() - touchStartAt < 700;
+    const longSwipe = Math.abs(dy) > 100;
     if (!current()) return;
-    // a clearly sideways swipe to the right = 覚えた (reachable with either thumb)
-    if (Math.abs(dx) >= Math.abs(dy) * 1.5) {
-      if (dx > 70) learnedBySwipe();
+    // whichever axis the finger moved more along decides; no dead zone for
+    // slanted swipes (a thumb rarely moves perfectly straight)
+    if (Math.abs(dx) > Math.abs(dy)) {
+      // sideways: to the right = 覚えた (reachable with either thumb)
+      if (dx > 60) learnedBySwipe();
       return;
     }
-    if (Math.abs(dx) >= Math.abs(dy) * 0.6) return; // diagonal: ignore
-    if (dy < -60 && (touchStartAtBottom || flick || longSwipe)) {
+    if (dy < -45 && (touchStartAtBottom || flick || longSwipe)) {
       advanceBySwipe();
-    } else if (dy > 60 && (touchStartAtTop || flick || longSwipe)) {
+    } else if (dy > 45 && (touchStartAtTop || flick || longSwipe)) {
       backBySwipe();
     }
   }
