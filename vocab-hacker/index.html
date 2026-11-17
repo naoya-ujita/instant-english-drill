@@ -6210,7 +6210,7 @@
     revealed = false;
     meaningEl.textContent = "[ TAP TO DECODE ]";
     meaningEl.className = "meaning hidden-state";
-    hintEl.textContent = "タップで意味 · ↑次へ ↓前へ →覚えた";
+    hintEl.textContent = "タップで意味 · ↑次へ ↓前へ · 2回タップで覚えた";
     tipEl.hidden = true;
     phonEl.hidden = true;
   }
@@ -6307,7 +6307,7 @@
     if (autoSpeak && userInteracted) speak();
     const target = posLabel(item.p).split(" ")[1] + "：" + item.m;
     meaningEl.className = "meaning revealed";
-    hintEl.textContent = "↑次へ · ↓前へ · →覚えた · 2回タップで覚えた";
+    hintEl.textContent = "↑次へ · ↓前へ · 2回タップで覚えた";
     if (reduceMotion) {
       meaningEl.textContent = target;
       showPhon(item);
@@ -6423,7 +6423,7 @@
     } else {
       hideMeaning();
       if (listening) {
-        hintEl.textContent = (autoSpeak && userInteracted ? "音声を聞いて意味を思い出す" : "🔊 をタップして音声を再生") + " · タップで単語と意味 · →覚えた";
+        hintEl.textContent = (autoSpeak && userInteracted ? "音声を聞いて意味を思い出す" : "🔊 をタップして音声を再生") + " · タップで単語と意味";
         meaningEl.textContent = "[ LISTEN & DECODE ]";
       }
     }
@@ -6830,12 +6830,9 @@
     const longSwipe = Math.abs(dy) > 100;
     if (!current()) return;
     // whichever axis the finger moved more along decides; no dead zone for
-    // slanted swipes (a thumb rarely moves perfectly straight)
-    if (Math.abs(dx) > Math.abs(dy)) {
-      // sideways: to the right = 覚えた (reachable with either thumb)
-      if (dx > 60) learnedBySwipe();
-      return;
-    }
+    // slanted swipes (a thumb rarely moves perfectly straight). Sideways
+    // swipes do nothing.
+    if (Math.abs(dx) > Math.abs(dy)) return;
     if (dy < -45 && (touchStartAtBottom || flick || longSwipe)) {
       advanceBySwipe();
     } else if (dy > 45 && (touchStartAtTop || flick || longSwipe)) {
