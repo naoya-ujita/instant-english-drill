@@ -2090,6 +2090,90 @@ const QUESTIONS = [
   { id: "L18-88", type: "kana", prompt: "refunded the customer", answer: "リ[ファ]ンディッド ザ [カ]スタマー", lesson: 18, hint: "re-FUND-ed", note: "「leap on to the customer」と聞こえた。r で始め、f をはっきり", tag: "Speaking", priority: 1 },
   { id: "L18-89", type: "kana", prompt: "the difference", answer: "ザ [ディ]ファレンス", lesson: 18, hint: "語尾は -ence（ス）", note: "「the different」と聞こえた", tag: "Speaking", priority: 2 },
   { id: "L18-90", type: "kana", prompt: "observed", answer: "オブ[ザ]ーヴド", lesson: 18, hint: "ob-SERVED", note: "語尾の d が落ちて「observe」と聞こえた", tag: "Troubles at the Workplace", priority: 3 },
+  // Lesson C1: 和文英訳
+  { id: "C1-01", type: "trans", prompt: "パソコンのことで助けが必要です。フリーズし続けるんです。", answer: "I need help with my computer. It keeps freezing.", lesson: "C1", hint: "need help with / keep ～ing", note: "暗唱で「I need for help」「I need with help」と言った。need help with ～ の語順で固定", tag: "IT Support", priority: 1 },
+  { id: "C1-02", type: "trans", prompt: "注文を効率的に処理する能力に影響が出ています。", answer: "It's affecting my ability to process orders efficiently.", lesson: "C1", hint: "affect my ability to ～ / process orders", note: "ability と process orders の意味が取れなかった。暗唱で efficiently を「effectively」と言った。process orders は1語のつもりで覚える（講師）", tag: "IT Support", priority: 1 },
+  { id: "C1-03", type: "trans", prompt: "代わりのものを手配してもらうことは可能ですか？", answer: "Is it possible to arrange a replacement?", lesson: "C1", hint: "arrange a replacement", note: "暗唱で「to arrange their… arranging」と言い直した。最初のリスニングでは冒頭から replacement の話が出ていることに気づかなかった", tag: "IT Support", priority: 1 },
+  { id: "C1-04", type: "trans", prompt: "それはお気の毒です（それは大変ですね）。", answer: "I'm sorry to hear that.", lesson: "C1", hint: "I'm sorry to ～", note: "暗唱で「It's sorry to hear that」と言った。主語は I", tag: "IT Support", priority: 2 },
+  { id: "C1-05", type: "trans", prompt: "再起動するか、ソフトウェアのアップデートを確認するかは試しましたか？", answer: "Have you tried rebooting it or checking for software updates?", lesson: "C1", hint: "try ～ing / A or B は同じ形", note: "暗唱で「Have you rebooting it?」と tried が抜け、後半を「or check」と言った。or は rebooting と checking をつなぐので両方 -ing（講師）", tag: "IT Support", priority: 1 },
+  { id: "C1-06", type: "trans", prompt: "両方試しましたが、問題は続いています。", answer: "I've tried both, but the problem has persisted.", lesson: "C1", hint: "persist＝しつこく続く", note: "persist を知らなかった。has been persisting では？と質問→現在完了だけで「今も続いている」は十分伝わる。-ing は今まさに続いていることを強調したいとき（講師）", tag: "IT Support", priority: 1 },
+  { id: "C1-07", type: "trans", prompt: "わかりました。代わりのものをあなたに送るよう、IT部門に話します。", answer: "Understood. I'll speak with the IT department to send a replacement to you.", lesson: "C1", hint: "speak with / send A to 人", note: "音読で「IT development」と読んだ。暗唱で「to arrange」と言いかけた（ここは send）", tag: "IT Support", priority: 1 },
+  { id: "C1-08", type: "trans", prompt: "シリアルナンバーと機種の詳細を送ってもらえますか？", answer: "Can you send me the serial number and the model details?", lesson: "C1", hint: "send＋人＋物", note: "暗唱で「Could you send me」と言い、Can you に直された。the model details の the が落ちた回もあり", tag: "IT Support", priority: 2 },
+  { id: "C1-09", type: "trans", prompt: "もちろんです。この電話のすぐ後にメールで送ります。", answer: "Sure, I'll email those to you right after this call.", lesson: "C1", hint: "email＋物＋to 人 / right after", note: "暗唱で「after right this call」と語順が逆になった。right after の順", tag: "IT Support", priority: 1 },
+  { id: "C1-10", type: "trans", prompt: "代わりのものが届くまで、どのくらいかかると思いますか？", answer: "How long do you think it will take to get the replacement?", lesson: "C1", hint: "How long do you think it will take to ～", note: "do you think を挟んだ後は it will take の語順（will it にしない）", tag: "IT Support", priority: 1 },
+  { id: "C1-11", type: "trans", prompt: "詳細をいただいたら、2日ほどかかるはずです。", answer: "Once I have the details, it should take about two days.", lesson: "C1", hint: "once＝いったん～したら（接続詞）", note: "once を「一度」と取った。暗唱で「Once I get / receive the details」と言い、have に直された。when より「～したらすぐ／～さえすれば」の感じが強い（講師）", tag: "IT Support", priority: 1 },
+  { id: "C1-12", type: "trans", prompt: "準備ができたらお知らせします。", answer: "I'll let you know when it's ready.", lesson: "C1", hint: "let＋人＋know", note: "リピートで「I had a journal」「Original」と聞こえた", tag: "IT Support", priority: 1 },
+  { id: "C1-13", type: "trans", prompt: "彼は再起動と、ソフトウェアのアップデートの確認を試しました。", answer: "He has tried rebooting it and checking for software updates.", lesson: "C1", hint: "check for ～", note: "質問 What two things has the man already tried? への答え。「checking software updates」と for が抜け、講師に直された", tag: "IT Support", priority: 1 },
+  { id: "C1-14", type: "trans", prompt: "代わりのものは2日以内に届きます。", answer: "He will get the replacement within two days.", lesson: "C1", hint: "in / within two days", note: "質問 How long …? に「It will take replacement for two days」と言った。get the replacement in (within) two days と直された。It will take about two days. でも可", tag: "IT Support", priority: 1 },
+  { id: "C1-15", type: "trans", prompt: "私は外食のほうが好きです。料理が得意ではないからです。", answer: "I prefer eating out because I'm not good at cooking.", lesson: "C1", hint: "prefer ～ing / be good at", note: "「I prefer eating outside」と言った。eating outside は「屋外で食べる」。質問は eating out（講師の訂正ではなく補足）", tag: "Part F Opinion", priority: 1 },
+  { id: "C1-16", type: "trans", prompt: "家で料理をすると、とても時間がかかります。", answer: "If I cook at home, it takes a lot of time.", lesson: "C1", hint: "it takes＋時間", note: "「If I'm cooking at home, it will take… too much… a lot of time」と言い直しが多かった。一般的な話なので現在形で言い切る", tag: "Part F Opinion", priority: 1 },
+  { id: "C1-17", type: "trans", prompt: "そうすると、家でくつろぐ時間がありません。", answer: "Then I don't have time to relax at home.", lesson: "C1", hint: "have time to ～", note: "「I don't have much time」「I can't relax at home」と2文で言えた。講師の誘導（時間がなくなるとどうなる？）で出た内容", tag: "Part F Opinion", priority: 1 },
+  { id: "C1-18", type: "trans", prompt: "だから私は外食のほうが好きです。", answer: "That's why I prefer eating out.", lesson: "C1", hint: "That's why", note: "締めの定番。So はカジュアルすぎて締まらない（講師）", tag: "Part F Opinion", priority: 1 },
+  { id: "C1-19", type: "trans", prompt: "私はいつも急いでいます。", answer: "I'm always in a rush.", lesson: "C1", hint: "in a rush", note: "正しく言えていた（1回目の2つ目の理由）", tag: "Part F Opinion", priority: 3 },
+  { id: "C1-20", type: "trans", prompt: "急いで食べなければなりません。", answer: "I have to eat quickly.", lesson: "C1", hint: "quickly", note: "「I had to eat speedily」と言って止まった。過去形にしない。speedily より quickly が自然（講師の訂正ではなく補足）", tag: "Part F Opinion", priority: 2 },
+  { id: "C1-21", type: "trans", prompt: "第一に、料理をする必要がありません。第二に、皿を洗う必要もありません。", answer: "First, I don't have to cook. Second, I don't have to wash the dishes.", lesson: "C1", hint: "First, ～. Second, ～.", note: "理由を2つ言うときは First / Second が一般的（講師）。文は講師の日本語例から作った補足文", tag: "Part F Opinion", priority: 1 },
+  { id: "C1-22", type: "trans", prompt: "外食は時間の節約になります。", answer: "Eating out saves me time.", lesson: "C1", hint: "無生物主語＋save", note: "講師の提案 save time を使った文。主語を I 以外にするとスマートにつながる", tag: "Why Game", priority: 1 },
+  { id: "C1-23", type: "trans", prompt: "そのおかげで、家でくつろぐことができます。", answer: "It allows me to relax at home.", lesson: "C1", hint: "allow＋人＋to do", note: "講師の日本語説明から作った補足文。allow / enable / make / lead to / cause の5つを使えるようにする", tag: "Why Game", priority: 1 },
+  { id: "C1-24", type: "trans", prompt: "家で食べるほうが安く済みます。", answer: "Eating at home is cheaper.", lesson: "C1", hint: "比較級", note: "講師の例（家で食べる派）。日本語例から作った補足文", tag: "Why Game", priority: 2 },
+  { id: "C1-25", type: "trans", prompt: "そのおかげで、お金を貯めてほかのものをたくさん買えます。", answer: "It enables me to save money and buy many other things.", lesson: "C1", hint: "enable＋人＋to do", note: "講師の例（安い→お金が貯まる→ほかの物が買える→生活が豊かに）から作った補足文", tag: "Why Game", priority: 2 },
+  { id: "C1-26", type: "trans", prompt: "家で食べると、家族と過ごす時間が増えます。", answer: "Eating at home gives me more time with my family.", lesson: "C1", hint: "give＋人＋more time", note: "講師の例（家族の時間→仲が良くなる→みんな幸せ）から作った補足文", tag: "Why Game", priority: 2 },
+  { id: "C1-27", type: "trans", prompt: "それはみんなを幸せにします。", answer: "It makes everyone happy.", lesson: "C1", hint: "make＋人＋形容詞", note: "「Eating out makes me…」で止まった。make の後は 人＋形容詞", tag: "Why Game", priority: 1 },
+  { id: "C1-28", type: "trans", prompt: "家で料理をすると、疲れてしまいます。（cause を使って）", answer: "Cooking at home causes me to feel tired.", lesson: "C1", hint: "cause＋人＋to do", note: "悪い影響には cause を使う（講師）。日本語説明から作った補足文", tag: "Why Game", priority: 2 },
+  { id: "C1-29", type: "trans", prompt: "一方で、家で料理をすると時間がたくさんかかります。", answer: "On the other hand, cooking at home takes a lot of time.", lesson: "C1", hint: "On the other hand", note: "反対側の意見（counterargument）に触れると説得力が増す。「On other side of the…」と言いかけた。However / While も可", tag: "Part F Opinion", priority: 2 },
+  { id: "C1-30", type: "trans", prompt: "「（悪い状態が）しつこく続く」を英語で言うと？", answer: "persist", lesson: "C1", note: "continue でも通じるが、persist は嫌なことがずるずる続く感じ（講師）", tag: "Vocabulary", priority: 1 },
+  { id: "C1-31", type: "trans", prompt: "「注文を処理する」を英語で言うと？", answer: "process orders", lesson: "C1", note: "会社で受けた注文を処理すること。セットで覚える", tag: "Vocabulary", priority: 1 },
+  { id: "C1-32", type: "trans", prompt: "「交換品・代わりのもの」を英語で言うと？", answer: "a replacement", lesson: "C1", hint: "replace＋ment", tag: "Vocabulary", priority: 1 },
+  { id: "C1-33", type: "trans", prompt: "「再起動する」を英語で言うと？", answer: "reboot", lesson: "C1", hint: "re＋boot", note: "リスニングで聞き取れなかった語。restart でも可", tag: "Vocabulary", priority: 2 },
+  { id: "C1-34", type: "trans", prompt: "「効率的に」を英語で言うと？", answer: "efficiently", lesson: "C1", note: "effectively（効果的に）と混同した", tag: "Vocabulary", priority: 1 },
+  { id: "C1-35", type: "trans", prompt: "「避難させる」を英語で言うと？", answer: "evacuate", lesson: "C1", note: "単語テストで意味が出なかった", tag: "Vocabulary", priority: 1 },
+  { id: "C1-36", type: "trans", prompt: "「棚・ラック」を英語で言うと？（r で始まる）", answer: "rack", lesson: "C1", note: "単語テストで lack（不足）と答え、luck（幸運）とも迷った", tag: "Vocabulary", priority: 1 },
+  { id: "C1-37", type: "trans", prompt: "「文書・書類（一式）」を英語で言うと？", answer: "documentation", lesson: "C1", note: "単語テストで「添付物」と答えて不正解。書類で OK", tag: "Vocabulary", priority: 2 },
+  { id: "C1-38", type: "trans", prompt: "「そういうわけで」を英語で言うと？（意見の締め・3通り）", answer: "That's why / Therefore / In conclusion", lesson: "C1", hint: "言いやすいのは That's why", note: "Therefore と In conclusion は硬め。So はカジュアル", tag: "Vocabulary", priority: 1 },
+  { id: "C1-39", type: "trans", prompt: "「反対意見・反論」を英語で言うと？", answer: "counterargument", lesson: "C1", hint: "counter＋argument", tag: "Vocabulary", priority: 3 },
+  // Lesson C1: 穴埋め
+  { id: "C1-40", type: "blank", prompt: "I need help ___ my computer.", answer: "with", lesson: "C1", note: "for ではない", tag: "IT Support", priority: 1 },
+  { id: "C1-41", type: "blank", prompt: "It keeps ___. (freeze)", answer: "freezing", lesson: "C1", hint: "keep ～ing", tag: "IT Support", priority: 2 },
+  { id: "C1-42", type: "blank", prompt: "It's affecting my ___ to process orders efficiently.", answer: "ability", lesson: "C1", hint: "能力", tag: "IT Support", priority: 1 },
+  { id: "C1-43", type: "blank", prompt: "It's affecting my ability to ___ orders efficiently.", answer: "process", lesson: "C1", hint: "処理する", tag: "IT Support", priority: 1 },
+  { id: "C1-44", type: "blank", prompt: "Is it possible to ___ a replacement? (手配する)", answer: "arrange", lesson: "C1", tag: "IT Support", priority: 2 },
+  { id: "C1-45", type: "blank", prompt: "Have you ___ rebooting it?", answer: "tried", lesson: "C1", hint: "try ～ing", note: "tried が抜けた", tag: "IT Support", priority: 1 },
+  { id: "C1-46", type: "blank", prompt: "Have you tried rebooting it or ___ for software updates? (check)", answer: "checking", lesson: "C1", hint: "or の前後は同じ形", tag: "IT Support", priority: 1 },
+  { id: "C1-47", type: "blank", prompt: "I've tried both, but the problem has ___.", answer: "persisted", lesson: "C1", tag: "IT Support", priority: 1 },
+  { id: "C1-48", type: "blank", prompt: "I'll speak with the IT ___ to send a replacement to you.", answer: "department", lesson: "C1", hint: "部門", note: "development ではない", tag: "IT Support", priority: 2 },
+  { id: "C1-49", type: "blank", prompt: "I'll email those to you ___ ___ this call. (すぐ後に)", answer: "right after", lesson: "C1", note: "after right ではない", tag: "IT Support", priority: 1 },
+  { id: "C1-50", type: "blank", prompt: "How long do you think ___ ___ take to get the replacement?", answer: "it will", lesson: "C1", tag: "IT Support", priority: 1 },
+  { id: "C1-51", type: "blank", prompt: "___ I have the details, it should take about two days. (いったん～したら)", answer: "Once", lesson: "C1", tag: "IT Support", priority: 1 },
+  { id: "C1-52", type: "blank", prompt: "Once I ___ the details, it should take about two days.", answer: "have", lesson: "C1", note: "get / receive と言った", tag: "IT Support", priority: 2 },
+  { id: "C1-53", type: "blank", prompt: "I'll ___ you know when it's ready.", answer: "let", lesson: "C1", tag: "IT Support", priority: 2 },
+  { id: "C1-54", type: "blank", prompt: "He will get the replacement ___ two days. (2日以内に)", answer: "within", lesson: "C1", hint: "in も可", note: "for ではない", tag: "IT Support", priority: 1 },
+  { id: "C1-55", type: "blank", prompt: "I'm not good ___ cooking.", answer: "at", lesson: "C1", tag: "Part F Opinion", priority: 2 },
+  { id: "C1-56", type: "blank", prompt: "___ ___ I prefer eating out. (だから)", answer: "That's why", lesson: "C1", tag: "Part F Opinion", priority: 1 },
+  { id: "C1-57", type: "blank", prompt: "Eating out ___ me time. (節約する)", answer: "saves", lesson: "C1", tag: "Why Game", priority: 1 },
+  { id: "C1-58", type: "blank", prompt: "It ___ me to relax at home. (可能にする)", answer: "allows", lesson: "C1", hint: "enables も可", tag: "Why Game", priority: 1 },
+  { id: "C1-59", type: "blank", prompt: "It ___ everyone happy.", answer: "makes", lesson: "C1", tag: "Why Game", priority: 1 },
+  // Lesson C1: 誤文訂正
+  { id: "C1-60", type: "correct", prompt: "I need for help my computer.", answer: "I need help with my computer.", lesson: "C1", hint: "need help with", tag: "IT Support", priority: 1 },
+  { id: "C1-61", type: "correct", prompt: "It's sorry to hear that.", answer: "I'm sorry to hear that.", lesson: "C1", hint: "主語", tag: "IT Support", priority: 2 },
+  { id: "C1-62", type: "correct", prompt: "Have you rebooting it or check for software updates?", answer: "Have you tried rebooting it or checking for software updates?", lesson: "C1", hint: "tried / -ing をそろえる", note: "講師に直された文", tag: "IT Support", priority: 1 },
+  { id: "C1-63", type: "correct", prompt: "He tried rebooting it and checking software updates.", answer: "He tried rebooting it and checking for software updates.", lesson: "C1", hint: "check for", note: "講師に直された文", tag: "IT Support", priority: 1 },
+  { id: "C1-64", type: "correct", prompt: "I'll email those to you after right this call.", answer: "I'll email those to you right after this call.", lesson: "C1", hint: "語順", note: "講師に「逆」と指摘された", tag: "IT Support", priority: 1 },
+  { id: "C1-65", type: "correct", prompt: "Once I get the details, it should take about two days. (本文どおりに)", answer: "Once I have the details, it should take about two days.", lesson: "C1", hint: "have", note: "意味は通じるが本文は have（講師「ここ get じゃないです」）", tag: "IT Support", priority: 2 },
+  { id: "C1-66", type: "correct", prompt: "It will take replacement for two days.", answer: "He will get the replacement in two days.", lesson: "C1", hint: "get ～ in / within", note: "講師に直された文", tag: "IT Support", priority: 1 },
+  { id: "C1-67", type: "correct", prompt: "It's affecting my ability to process orders effectively. (本文どおりに)", answer: "It's affecting my ability to process orders efficiently.", lesson: "C1", hint: "効率的に", tag: "IT Support", priority: 2 },
+  { id: "C1-68", type: "correct", prompt: "I prefer eating outside. (外食の意味で)", answer: "I prefer eating out.", lesson: "C1", hint: "eat out＝外食する", note: "講師の訂正ではなく補足", tag: "Part F Opinion", priority: 1 },
+  { id: "C1-69", type: "correct", prompt: "I had to eat speedily. (いつもの習慣)", answer: "I have to eat quickly.", lesson: "C1", hint: "現在形 / quickly", note: "講師の訂正ではなく補足", tag: "Part F Opinion", priority: 2 },
+  { id: "C1-70", type: "correct", prompt: "If I'm cooking at home, it will take too much a lot of time.", answer: "If I cook at home, it takes a lot of time.", lesson: "C1", hint: "現在形で言い切る", note: "言い直しをせず1回で", tag: "Part F Opinion", priority: 1 },
+  // Lesson C1: カタカナ発音
+  { id: "C1-71", type: "kana", prompt: "replacement", answer: "リ[プレ]イスメント", lesson: "C1", hint: "re-PLACE-ment", note: "「Elizabeth」「new president」「depressant」と聞こえた。r で始め、pl をはっきり", tag: "IT Support", priority: 1 },
+  { id: "C1-72", type: "kana", prompt: "rebooting it", answer: "リ[ブ]ーティング イット", lesson: "C1", hint: "re-BOOT-ing", note: "「beaver tuning」「debuting」「recording」と聞こえた。r で始め、b をはっきり", tag: "IT Support", priority: 1 },
+  { id: "C1-73", type: "kana", prompt: "efficiently", answer: "イ[フィ]シェントリー", lesson: "C1", hint: "e-FI-cient-ly", note: "「FS entry」「if it's entry」と聞こえた。fi にアクセント、語尾は -ly", tag: "IT Support", priority: 1 },
+  { id: "C1-74", type: "kana", prompt: "It keeps freezing", answer: "イット [キ]ープス [フリ]ーズィング", lesson: "C1", hint: "fr-", note: "「ringing」「freebie」と聞こえた。語頭の f を落とさない", tag: "IT Support", priority: 1 },
+  { id: "C1-75", type: "kana", prompt: "I'll let you know", answer: "アイル [レ]ット ユー [ノ]ウ", lesson: "C1", hint: "let は l", note: "「I had a journal」「Original」と聞こえた。I'll と let をはっきり", tag: "IT Support", priority: 1 },
+  { id: "C1-76", type: "kana", prompt: "or checking for", answer: "オア [チェ]キング フォー", lesson: "C1", hint: "CHECK-ing", note: "「Watching King」と聞こえた。or を弱く、che は短いエ", tag: "IT Support", priority: 2 },
+  { id: "C1-77", type: "kana", prompt: "the model details", answer: "ザ [モ]ドル [ディ]ーテイルズ", lesson: "C1", hint: "DEE-tails", note: "「the model it is」と聞こえた。語頭の d を落とさない", tag: "IT Support", priority: 2 },
+  { id: "C1-78", type: "kana", prompt: "process orders", answer: "[プラ]セス [オ]ーダーズ", lesson: "C1", hint: "PRO-cess", note: "「process all the」と聞こえた。orders の語尾 z まで言う", tag: "IT Support", priority: 1 },
+  { id: "C1-79", type: "kana", prompt: "department", answer: "ディ[パ]ートメント", lesson: "C1", hint: "de-PART-ment", note: "「development」と読んだ", tag: "IT Support", priority: 2 },
+  { id: "C1-80", type: "kana", prompt: "persisted", answer: "パー[シ]スティッド", lesson: "C1", hint: "per-SIST-ed", note: "「Passed it」「assisted」と聞こえた", tag: "IT Support", priority: 2 },
   // Lesson T1: 文の変形
   { id: "T1-01", type: "transform", prompt: "He plays baseball every Sunday. ⇒ yesterday", answer: "He played baseball yesterday.", lesson: "T1", hint: "過去形に", note: "every Sunday → yesterday で時制が変わる", tag: "時制", priority: 1 },
   { id: "T1-02", type: "transform", prompt: "He played baseball yesterday. ⇒ watch", answer: "He watched baseball yesterday.", lesson: "T1", hint: "動詞を置き換え", note: "play → watch。時制はそのまま", tag: "動詞", priority: 1 },
@@ -2970,6 +3054,30 @@ const QUESTIONS = [
   // Lesson WG1117: 穴埋め
   { id: "WG1117-09", type: "blank", prompt: "Eating ice cream cools you down, so it can keep you ___ getting dehydrated.", answer: "from", lesson: "WG1117", hint: "keep＋人＋from ～ing", note: "「人が～するのを防ぐ」", tag: "Why Game", priority: 2 },
   { id: "WG1117-10", type: "blank", prompt: "___ this reason, ice cream is better than cake.", answer: "For", lesson: "WG1117", hint: "結論の決まり文句", note: "For this reason ＝ この理由から", tag: "Why Game", priority: 2 },
+  // Lesson WG1117: 和文英訳
+  { id: "WG1117-11", type: "trans", prompt: "たとえば？", answer: "For example?", lesson: "WG1117", hint: "問い返し", note: "Why Game の B 役。相手に具体例を求める", tag: "Why Game", priority: 1 },
+  { id: "WG1117-12", type: "trans", prompt: "なぜそれがいいのですか？", answer: "Why is that good?", lesson: "WG1117", hint: "問い返し", note: "Why do you think so? でも可", tag: "Why Game", priority: 1 },
+  { id: "WG1117-13", type: "trans", prompt: "それはどういう意味ですか？", answer: "What does that mean?", lesson: "WG1117", hint: "問い返し", note: "What do you mean? でも可", tag: "Why Game", priority: 1 },
+  { id: "WG1117-14", type: "trans", prompt: "それで、どうなりますか？", answer: "Then, what will happen?", lesson: "WG1117", hint: "問い返し", note: "理由の先（メリット）を引き出す問い", tag: "Why Game", priority: 1 },
+  { id: "WG1117-15", type: "trans", prompt: "段落にしてください。", answer: "Please make a paragraph.", lesson: "WG1117", hint: "make a paragraph", note: "基本の型：①意見＋シンプルな理由 ②理由の補足や具体例 ③メリット（どんないいことに繋がるか） ④結論（自分の意見を再度）", tag: "Why Game", priority: 2 },
+  { id: "WG1117-16", type: "trans", prompt: "A は B より良いです。なぜなら〜だからです。（型）", answer: "A is better than B because ~.", lesson: "WG1117", hint: "A is better than B because", note: "Step 3 の A 役の最初の一言。because の後に理由を続ける", tag: "Why Game", priority: 2 },
+  { id: "WG1117-17", type: "trans", prompt: "そのお金のおかげで私の娘は留学できた。", answer: "The money enabled my daughter to study abroad.", lesson: "WG1117", hint: "S（原因）＋enable＋A＋to do", note: "enable＝実現させる。「おかげで」を主語に置く他動詞構文", tag: "他動詞構文", priority: 1 },
+  { id: "WG1117-18", type: "trans", prompt: "これによりその産業は新市場を開拓しようとするだろう。", answer: "This will encourage the industry to develop new markets.", lesson: "WG1117", hint: "encourage＋A＋to do", note: "encourage＝する気にさせる", tag: "他動詞構文", priority: 1 },
+  { id: "WG1117-19", type: "trans", prompt: "SNS のおかげで我々は自由に意見を述べることができる。", answer: "Social media allows us to express our opinion freely.", lesson: "WG1117", hint: "allow＋A＋to do", note: "allow＝許す／させてくれる。「おかげで〜できる」は allow で言える", tag: "他動詞構文", priority: 1 },
+  { id: "WG1117-20", type: "trans", prompt: "その決定のせいで我々は製品の質を犠牲にしてしまった。", answer: "The decision caused us to sacrifice the quality of our products.", lesson: "WG1117", hint: "cause＋A＋to do", note: "cause＝引き起こす（悪い影響のとき）", tag: "他動詞構文", priority: 1 },
+  { id: "WG1117-21", type: "trans", prompt: "このせいでアメリカ製品の値段が高くなる。", answer: "This makes American products more expensive.", lesson: "WG1117", hint: "make＋A＋形容詞", note: "make＝させる／形を変える。後ろは do か形容詞（to は付けない）", tag: "他動詞構文", priority: 1 },
+  { id: "WG1117-22", type: "trans", prompt: "「〜を実現させる・〜できるようにする」を英語で言うと？（S＋動詞＋A＋to do）", answer: "enable", lesson: "WG1117", hint: "enable A to do", tag: "他動詞構文", priority: 2 },
+  { id: "WG1117-23", type: "trans", prompt: "「〜する気にさせる・促す」を英語で言うと？（S＋動詞＋A＋to do）", answer: "encourage", lesson: "WG1117", hint: "encourage A to do", tag: "他動詞構文", priority: 2 },
+  { id: "WG1117-24", type: "trans", prompt: "「〜させてくれる・許す」を英語で言うと？（S＋動詞＋A＋to do）", answer: "allow", lesson: "WG1117", hint: "allow A to do", tag: "他動詞構文", priority: 2 },
+  { id: "WG1117-25", type: "trans", prompt: "「〜を引き起こす（悪い影響）」を英語で言うと？（S＋動詞＋A＋to do）", answer: "cause", lesson: "WG1117", hint: "cause A to do", tag: "他動詞構文", priority: 2 },
+  // Lesson WG1117: 穴埋め
+  { id: "WG1117-26", type: "blank", prompt: "The money ___ my daughter to study abroad.", answer: "enabled", lesson: "WG1117", hint: "実現させる（過去形）", tag: "他動詞構文", priority: 2 },
+  { id: "WG1117-27", type: "blank", prompt: "Social media ___ us to express our opinion freely.", answer: "allows", lesson: "WG1117", hint: "させてくれる", note: "三単現の s", tag: "他動詞構文", priority: 2 },
+  { id: "WG1117-28", type: "blank", prompt: "The decision ___ us to sacrifice the quality of our products.", answer: "caused", lesson: "WG1117", hint: "引き起こした", tag: "他動詞構文", priority: 2 },
+  { id: "WG1117-29", type: "blank", prompt: "This makes American products ___ ___.", answer: "more expensive", lesson: "WG1117", hint: "make＋A＋形容詞（比較級）", tag: "他動詞構文", priority: 2 },
+  // Lesson WG1117: 誤文訂正
+  { id: "WG1117-30", type: "correct", prompt: "This makes American products to be more expensive.", answer: "This makes American products more expensive.", lesson: "WG1117", hint: "make の後ろ", note: "make＋A＋形容詞。to be は不要", tag: "他動詞構文", priority: 1 },
+  { id: "WG1117-31", type: "correct", prompt: "Social media allows us express our opinion freely.", answer: "Social media allows us to express our opinion freely.", lesson: "WG1117", hint: "allow＋A＋to do", note: "allow の後ろは to 不定詞（make と違う）", tag: "他動詞構文", priority: 1 },
 ];
 
 /* 「言えた」がこの回数続いた文は出題から外れる（× で振り出しに戻る） */
@@ -2983,7 +3091,7 @@ const JE_QUOTA = 21;
 /* 補充の優先順: RECENT（最近追加した問題）→ PRIORITY_UNITS の英作文 → 文の変形 → 英作文の枠 → その他。
    覚えていない分を順に1周に入れる。ただし最新の段だけで埋めず、OLD_QUOTA 件は一つ前の段以降（少し古めの問題）から混ぜる。
    問題を追加したら RECENT を書き換える */
-const RECENT_LESSONS = [["WG1117", "V1", "18", "DR1115", "17", "EC1112", "PH1", "unit:indirectq", "unit:reladv", "unit:relpro", "unit:prep", "unit:word", "unit:pp3", "unit:inf4"], ["16", "EC1110", "EC1110B"], "PC1105", ["EC1104", "EC1104B"], "EC1027"]; // "unit:〜" は英作文の単元 // 最近追加したレッスン（先頭ほど先に出す。配列は同じ段）
+const RECENT_LESSONS = [["C1", "WG1117", "V1", "18", "DR1115", "17", "EC1112", "PH1", "unit:indirectq", "unit:reladv", "unit:relpro", "unit:prep", "unit:word", "unit:pp3", "unit:inf4"], ["16", "EC1110", "EC1110B"], "PC1105", ["EC1104", "EC1104B"], "EC1027"]; // "unit:〜" は英作文の単元 // 最近追加したレッスン（先頭ほど先に出す。配列は同じ段）
 const RECENT_UNITS = ["cushion", "there", "partic", "talk"]; // 最近追加した英作文の単元（レッスンの次）
 const PRIORITY_UNITS = ["can", "ableto", "must", "haveto"];
 /* 1周のうち、最新の段（RECENT_LESSONS の先頭）以外から入れる数と、そのうち同じ段から入れる上限 */
@@ -2991,7 +3099,7 @@ const OLD_QUOTA = 8, OLD_CAP = 4;
 const DECK_RULE = 14;  // 補充ルールの版。変えると次回に1周分を組み直す
 /* 1日に覚える目標数。「今日 あと N」として表示し、ホーム画面のアイコンのバッジにも出す（対応端末のみ） */
 const DAILY_GOAL = 100;
-const APP_VER = "105";   // 診断表示用
+const APP_VER = "106";   // 診断表示用
 
 const UNITS = { ...COMPOSE_UNITS, ...PRON_UNITS, ...QUIZ_UNITS };
 const tagNote = (s) => [s.lesson ? "Lesson " + s.lesson : "", s.tag ? "文法: " + s.tag : "", s.note || ""].filter(Boolean).join(" · ");
