@@ -413,6 +413,14 @@
     gap: 8px;
     justify-content: space-between;
   }
+  .ask {
+    appearance: none; margin-left: auto; margin-right: 10px; padding: 4px 10px; border-radius: 999px;
+    border: 1px solid var(--rule); background: transparent; color: var(--ink-2);
+    font: inherit; font-size: 12px; letter-spacing: .02em; cursor: pointer; white-space: nowrap; flex: none;
+  }
+  .ask:hover { color: var(--ink); border-color: var(--ink-3); }
+  .card:not(.revealed) .ask { visibility: hidden; }
+  .timer { flex: none; }
   .sheet {
     position: absolute;
     inset: 0;
@@ -716,6 +724,7 @@
     <div class="stamp jp" aria-hidden="true"><span>言えた ✓</span></div>
     <div class="card-head">
       <span><span class="unit-tag jp" id="unitTag"></span><span class="hard-tag jp" id="hardTag" hidden>苦手</span></span>
+      <button class="ask jp" id="askBtn" type="button" title="この問題について Claude に解説してもらう">✦ Claude に解説</button>
       <span class="timer" id="timer" hidden>
         <span class="mono" id="timerText"></span><small>秒</small>
       </span>
@@ -3116,7 +3125,7 @@ const OLD_QUOTA = 8, OLD_CAP = 4;
 const DECK_RULE = 14;  // 補充ルールの版。変えると次回に1周分を組み直す
 /* 1日に覚える目標数。「今日 あと N」として表示し、ホーム画面のアイコンのバッジにも出す（対応端末のみ） */
 const DAILY_GOAL = 100;
-const APP_VER = "111";   // 診断表示用
+const APP_VER = "112";   // 診断表示用
 
 const UNITS = { ...COMPOSE_UNITS, ...PRON_UNITS, ...QUIZ_UNITS };
 const tagNote = (s) => [s.lesson ? "Lesson " + s.lesson : "", s.tag ? "文法: " + s.tag : "", s.note || ""].filter(Boolean).join(" · ");
@@ -3210,7 +3219,7 @@ const el = {
   answerLabel: $("answerLabel"), answerText: $("answerText"), answerNote: $("answerNote"),
   counter: $("counter"),
   revealBtn: $("revealBtn"), okBtn: $("okBtn"), againBtn: $("againBtn"),
-  sheetBtn: $("sheetBtn"), speakBtn: $("speakBtn"), speakBtn2: $("speakBtn2"), actions: $("actions"),
+  sheetBtn: $("sheetBtn"), askBtn: $("askBtn"), speakBtn: $("speakBtn"), speakBtn2: $("speakBtn2"), actions: $("actions"),
   score: $("score"), timeLimit: $("timeLimit"), resetBtn: $("resetBtn"), autoSpeak: $("autoSpeak"),
   restoreBtn: $("restoreBtn"),
   nDone: $("nDone"), nHalf: $("nHalf"), nTodo: $("nTodo"), barDone: $("barDone"), barHalf: $("barHalf"),
@@ -4045,6 +4054,32 @@ document.addEventListener("keydown", unlockSpeech, { once: true, capture: true }
 /* ---- wiring ---- */
 el.revealBtn.addEventListener("click", () => reveal());
 el.sheetBtn.addEventListener("click", () => reveal());
+/* Claude に解説してもらう: 問題・答え・ヒント・解説を添えた質問文を用意して Claude を開く。
+   開けない枠の中ではクリップボードにコピーする */
+function askPrompt(s) {
+  const k = KINDS[s.kind];
+  const lines = ["英語学習アプリの問題について、日本語で解説してください。", "",
+    "問題の種類: " + (UNITS[s.unit]?.label || s.kind),
+    "問題: " + (k.prompt ? k.prompt(s) : ""),
+    "答え: " + (s.en ?? s.answer ?? "")];
+  if (s.hint) lines.push("ヒント: " + s.hint);
+  if (s.tag) lines.push("文法: " + s.tag);
+  if (s.note) lines.push("メモ: " + s.note);
+  lines.push("", "知りたいこと: 文法・語法のポイント、日本人が間違えやすい点、ほかの自然な言い方、発音のコツ（音のつながりと強勢）。簡潔にお願いします。");
+  return lines.join("\n");
+}
+function askClaude() {
+  if (state.current == null) return;
+  const text = askPrompt(ITEMS[state.current]);
+  const url = "https://claude.ai/new?q=" + encodeURIComponent(text);
+  let w = null;
+  try { w = window.open(url, "_blank", "noopener"); } catch {}
+  if (w) return;
+  const copied = () => showNotice("Claude を開けなかったので、質問文をコピーしました。Claude に貼り付けて送ってください。");
+  if (navigator.clipboard?.writeText) navigator.clipboard.writeText(text).then(copied).catch(() => showNotice(text));
+  else showNotice(text);
+}
+el.askBtn.addEventListener("click", askClaude);
 el.okBtn.addEventListener("click", () => grade(true));
 el.againBtn.addEventListener("click", () => grade(false));
 el.speakBtn.addEventListener("click", speakOrPause);
@@ -4107,6 +4142,7 @@ document.addEventListener("keydown", (e) => {
   else if (e.key === "2" && state.revealed) { grade(false); }
   else if (e.key === "s") { speak(); }
   else if (e.key === "p") { togglePause(); }
+  else if (e.key === "a" && state.revealed) { askClaude(); }
   else if (e.key === "Backspace" || e.key === "ArrowDown") { e.preventDefault(); undoLast(); }
 });
 
