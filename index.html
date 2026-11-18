@@ -3116,7 +3116,7 @@ const OLD_QUOTA = 8, OLD_CAP = 4;
 const DECK_RULE = 14;  // 補充ルールの版。変えると次回に1周分を組み直す
 /* 1日に覚える目標数。「今日 あと N」として表示し、ホーム画面のアイコンのバッジにも出す（対応端末のみ） */
 const DAILY_GOAL = 100;
-const APP_VER = "110";   // 診断表示用
+const APP_VER = "111";   // 診断表示用
 
 const UNITS = { ...COMPOSE_UNITS, ...PRON_UNITS, ...QUIZ_UNITS };
 const tagNote = (s) => [s.lesson ? "Lesson " + s.lesson : "", s.tag ? "文法: " + s.tag : "", s.note || ""].filter(Boolean).join(" · ");
@@ -4112,6 +4112,18 @@ document.addEventListener("keydown", (e) => {
 
 startRound();
 initCloud();
+
+/* 単独 URL 版（ホーム画面アプリ）は古いページを保持しがちなので、開いたときに新しい版があれば読み直す */
+(async function checkUpdate() {
+  try {
+    if (window.self !== window.top || location.protocol !== "https:") return;
+    if (sessionStorage.getItem("ie:reloaded") === APP_VER) return;   // 読み直しの繰り返しを防ぐ
+    const res = await fetch(location.pathname + "?v=" + Date.now(), { cache: "no-store" });
+    const m = /APP_VER = "(\d+)"/.exec(await res.text());
+    if (m && m[1] !== APP_VER) { sessionStorage.setItem("ie:reloaded", m[1]); location.reload(); }
+  } catch {}
+})();
+document.addEventListener("visibilitychange", () => { if (!document.hidden) setTimeout(() => { try { if (window.self === window.top && location.protocol === "https:") fetch(location.pathname + "?v=" + Date.now(), { cache: "no-store" }).then(r => r.text()).then(t => { const m = /APP_VER = "(\d+)"/.exec(t); if (m && m[1] !== APP_VER && state.current == null) location.reload(); }); } catch {} }, 0); });
 </script>
 </body>
 </html>
