@@ -3116,7 +3116,7 @@ const OLD_QUOTA = 8, OLD_CAP = 4;
 const DECK_RULE = 14;  // 補充ルールの版。変えると次回に1周分を組み直す
 /* 1日に覚える目標数。「今日 あと N」として表示し、ホーム画面のアイコンのバッジにも出す（対応端末のみ） */
 const DAILY_GOAL = 100;
-const APP_VER = "109";   // 診断表示用
+const APP_VER = "110";   // 診断表示用
 
 const UNITS = { ...COMPOSE_UNITS, ...PRON_UNITS, ...QUIZ_UNITS };
 const tagNote = (s) => [s.lesson ? "Lesson " + s.lesson : "", s.tag ? "文法: " + s.tag : "", s.note || ""].filter(Boolean).join(" · ");
@@ -3474,6 +3474,7 @@ function reveal(auto = false) {
   state.revealed = true;
   clearTimer();
   el.card.classList.add("revealed");
+  if (!el.speakBtn.hidden) el.speakBtn2.hidden = true;   // 答えを開いたら読み上げボタンは答えの横の1つだけにする
   setActions("revealed");
   fitPrompt();
   el.okBtn.focus({ preventScroll: true });
