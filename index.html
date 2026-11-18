@@ -461,11 +461,12 @@
   .speak:hover { color: var(--ink); border-color: var(--ink-3); }
   .speak:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
   .speak[hidden] { display: none; }
-  .speak.pause { margin-left: 6px; }
-  .speak.pause .ic-play { display: none; }
-  .speak.pause.paused .ic-pause { display: none; }
-  .speak.pause.paused .ic-play { display: block; }
-  .speak.pause.paused { color: var(--shu-deep); border-color: var(--shu-deep); }
+  .speak .ic-speak { display: inline-flex; }
+  .speak .ic-pause, .speak .ic-play { display: none; }
+  .speak.playing .ic-speak, .speak.paused .ic-speak { display: none; }
+  .speak.playing .ic-pause { display: block; }
+  .speak.paused .ic-play { display: block; }
+  .speak.playing, .speak.paused { color: var(--shu-deep); border-color: var(--shu-deep); }
 
   /* ---- actions: right under the answer ---- */
   .actions {
@@ -729,9 +730,8 @@
       <div class="row">
         <p class="ja jp" id="promptText"></p>
         <button class="speak" id="speakBtn2" type="button" title="読み上げ" aria-label="英語を読み上げる" hidden>
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 5 6 9H2v6h4l5 4V5z"/><path d="M15.5 8.5a5 5 0 0 1 0 7"/><path d="M18.5 5.5a9 9 0 0 1 0 13"/></svg>
+          <span class="ic-speak"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 5 6 9H2v6h4l5 4V5z"/><path d="M15.5 8.5a5 5 0 0 1 0 7"/><path d="M18.5 5.5a9 9 0 0 1 0 13"/></svg></span><svg class="ic-pause" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><rect x="6" y="5" width="4" height="14" rx="1"/><rect x="14" y="5" width="4" height="14" rx="1"/></svg><svg class="ic-play" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
         </button>
-        <button class="speak pause" id="pauseBtn2" type="button" title="一時停止" aria-label="読み上げを一時停止" hidden><svg class="ic-pause" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><rect x="6" y="5" width="4" height="14" rx="1"/><rect x="14" y="5" width="4" height="14" rx="1"/></svg><svg class="ic-play" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></button>
       </div>
     </section>
 
@@ -740,9 +740,8 @@
       <div class="row">
         <p class="en" id="answerText"></p>
         <button class="speak" id="speakBtn" type="button" title="読み上げ" aria-label="英語を読み上げる">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 5 6 9H2v6h4l5 4V5z"/><path d="M15.5 8.5a5 5 0 0 1 0 7"/><path d="M18.5 5.5a9 9 0 0 1 0 13"/></svg>
+          <span class="ic-speak"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 5 6 9H2v6h4l5 4V5z"/><path d="M15.5 8.5a5 5 0 0 1 0 7"/><path d="M18.5 5.5a9 9 0 0 1 0 13"/></svg></span><svg class="ic-pause" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><rect x="6" y="5" width="4" height="14" rx="1"/><rect x="14" y="5" width="4" height="14" rx="1"/></svg><svg class="ic-play" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
         </button>
-        <button class="speak pause" id="pauseBtn" type="button" title="一時停止" aria-label="読み上げを一時停止" hidden><svg class="ic-pause" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><rect x="6" y="5" width="4" height="14" rx="1"/><rect x="14" y="5" width="4" height="14" rx="1"/></svg><svg class="ic-play" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></button>
       </div>
       <p class="note jp" id="answerNote"></p>
       <button class="sheet jp" id="sheetBtn" type="button">
@@ -3117,7 +3116,7 @@ const OLD_QUOTA = 8, OLD_CAP = 4;
 const DECK_RULE = 14;  // 補充ルールの版。変えると次回に1周分を組み直す
 /* 1日に覚える目標数。「今日 あと N」として表示し、ホーム画面のアイコンのバッジにも出す（対応端末のみ） */
 const DAILY_GOAL = 100;
-const APP_VER = "108";   // 診断表示用
+const APP_VER = "109";   // 診断表示用
 
 const UNITS = { ...COMPOSE_UNITS, ...PRON_UNITS, ...QUIZ_UNITS };
 const tagNote = (s) => [s.lesson ? "Lesson " + s.lesson : "", s.tag ? "文法: " + s.tag : "", s.note || ""].filter(Boolean).join(" · ");
@@ -3211,7 +3210,7 @@ const el = {
   answerLabel: $("answerLabel"), answerText: $("answerText"), answerNote: $("answerNote"),
   counter: $("counter"),
   revealBtn: $("revealBtn"), okBtn: $("okBtn"), againBtn: $("againBtn"),
-  sheetBtn: $("sheetBtn"), speakBtn: $("speakBtn"), speakBtn2: $("speakBtn2"), pauseBtn: $("pauseBtn"), pauseBtn2: $("pauseBtn2"), actions: $("actions"),
+  sheetBtn: $("sheetBtn"), speakBtn: $("speakBtn"), speakBtn2: $("speakBtn2"), actions: $("actions"),
   score: $("score"), timeLimit: $("timeLimit"), resetBtn: $("resetBtn"), autoSpeak: $("autoSpeak"),
   restoreBtn: $("restoreBtn"),
   nDone: $("nDone"), nHalf: $("nHalf"), nTodo: $("nTodo"), barDone: $("barDone"), barHalf: $("barHalf"),
@@ -3833,17 +3832,23 @@ function speak() {
   if (text) speakText(text);
 }
 
-/* 一時停止 / 再開ボタン。鳴っている間だけ表示し、止めている間は ▶ になる */
+/* 読み上げボタンは、鳴っている間は ⏸（一時停止）、止めている間は ▶（再開）になる */
 let userPaused = false, lastSpoken = "";
 function renderPause() {
   if (!("speechSynthesis" in window)) return;
-  const playing = !!currentUtterance && speechSynthesis.speaking && !speechSynthesis.paused;
-  const show = playing || userPaused;
-  for (const [b, sp] of [[el.pauseBtn, el.speakBtn], [el.pauseBtn2, el.speakBtn2]]) {
-    b.hidden = !show || sp.hidden;
+  const playing = !!currentUtterance && speechSynthesis.speaking && !speechSynthesis.paused && !userPaused;
+  for (const b of [el.speakBtn, el.speakBtn2]) {
+    b.classList.toggle("playing", playing);
     b.classList.toggle("paused", userPaused);
-    b.title = userPaused ? "再開" : "一時停止";
+    b.title = userPaused ? "再開" : playing ? "一時停止" : "読み上げ";
+    b.setAttribute("aria-label", b.title);
   }
+}
+/* ボタンを押したとき: 止めていれば再開、鳴っていれば一時停止、それ以外は読み上げ */
+function speakOrPause() {
+  if (!("speechSynthesis" in window)) return;
+  if (userPaused || (currentUtterance && speechSynthesis.speaking && !speechSynthesis.paused)) togglePause();
+  else speak();
 }
 function togglePause() {
   if (!("speechSynthesis" in window)) return;
@@ -4041,10 +4046,8 @@ el.revealBtn.addEventListener("click", () => reveal());
 el.sheetBtn.addEventListener("click", () => reveal());
 el.okBtn.addEventListener("click", () => grade(true));
 el.againBtn.addEventListener("click", () => grade(false));
-el.speakBtn.addEventListener("click", speak);
-el.speakBtn2.addEventListener("click", speak);
-el.pauseBtn.addEventListener("click", togglePause);
-el.pauseBtn2.addEventListener("click", togglePause);
+el.speakBtn.addEventListener("click", speakOrPause);
+el.speakBtn2.addEventListener("click", speakOrPause);
 el.resetBtn.addEventListener("click", startRound);
 el.restoreBtn.addEventListener("click", () => {
   if (masteredCount() === 0) return;
