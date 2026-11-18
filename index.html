@@ -2997,6 +2997,17 @@ const QUESTIONS = [
   { id: "EC1112-57", type: "trans", prompt: "彼は注文品がまだ発送されていなかったので電話した。", answer: "He called because his order hadn't shipped yet.", lesson: "EC1112", hint: "口語的な言い方", note: "EC1112-41 の別の言い方。ship は自動詞でも使える（商品が発送される）", tag: "リテル", priority: 2 },
   { id: "EC1112-58", type: "trans", prompt: "私は慌てん坊だからね。", answer: "I'm always in a rush, you know.", lesson: "EC1112", hint: "in a rush", note: "「落ち着きがなくうっかり」なら I'm a bit of a scatterbrain. 「急ぎがち」なら I tend to rush things.", tag: "スピーチ", priority: 1 },
   { id: "EC1112-59", type: "trans", prompt: "せっかちとも言える。", answer: "You could say I'm impatient.", lesson: "EC1112", hint: "You could say ～", note: "「〜とも言える」は You could say が定番。You could also call it being hasty. でもOK", tag: "スピーチ", priority: 1 },
+  // Lesson EC1118: 和文英訳
+  { id: "EC1118-01", type: "trans", prompt: "喜んで取り組みます。（仕事を引き受けるときの丁寧な定番）", answer: "I'd be happy to work on it.", lesson: "EC1118", hint: "I'd be happy to ～", note: "I'd＝I would。would が入ると「（頼まれたら）喜んで」と控えめで丁寧。I'm happy to でも通じるが would の形が大人っぽい", tag: "引き受け", priority: 1 },
+  { id: "EC1118-02", type: "trans", prompt: "喜んで。（I'd be happy to とほぼ同じ意味・短く）", answer: "I'd be glad to.", lesson: "EC1118", hint: "glad", note: "I'd love to. ならもっと熱意が強くカジュアル", tag: "引き受け", priority: 2 },
+  { id: "EC1118-03", type: "trans", prompt: "私がやっておきます。（実務的な言い方）", answer: "I'll take care of it.", lesson: "EC1118", hint: "take care of", note: "引き受けの実務的な定番", tag: "引き受け", priority: 2 },
+  { id: "EC1118-04", type: "trans", prompt: "「〜に取り組む・〜を手がける」を英語で言うと？", answer: "work on", lesson: "EC1118", hint: "work on ～", note: "be happy to work on it の work on", tag: "引き受け", priority: 2 },
+  // Lesson EC1118: 穴埋め
+  { id: "EC1118-05", type: "blank", prompt: "I'd be happy to (   ) (   ) it.", answer: "work / on", lesson: "EC1118", hint: "取り組む", note: "work on ～＝〜に取り組む", tag: "引き受け", priority: 2 },
+  { id: "EC1118-06", type: "blank", prompt: "(   ) be happy to work on it.", answer: "I'd", lesson: "EC1118", hint: "I would の短縮", note: "would で控えめ・丁寧に", tag: "引き受け", priority: 2 },
+  // Lesson EC1118: カタカナ発音
+  { id: "EC1118-07", type: "kana", prompt: "I'd be happy to work on it", answer: "アイビ [ハ]ピタ [ワー]コニッ", lesson: "EC1118", hint: "happy と work を強く", note: "I'd は d を軽く添えて be につなげ「アイビ」。happy to は to を弱く「ハピタ」。work on it は k が on に、n が it にくっついて「ワーコニッ」。最後の t はほぼ聞こえない", tag: "発音", priority: 1 },
+  { id: "EC1118-08", type: "kana", prompt: "work on it", answer: "[ワー]コニッ", lesson: "EC1118", hint: "3語をつなげる", note: "work の k が on に、on の n が it にくっつく。オーバーラッピングでは I'd を言いそびれやすいので「アイビ」をひとかたまりで出す", tag: "発音", priority: 1 },
   // Lesson PC1105: 和文英訳
   { id: "PC1105-01", type: "trans", prompt: "すみません、今のお話は私宛てでしたか、それとも娘宛てでしたか？", answer: "Sorry, was that for me or for my daughter?", lesson: "PC1105", hint: "was that for ~ or ~", note: "誰宛てか分からないときの安全弁", tag: "聞き返し", priority: 1 },
   { id: "PC1105-02", type: "trans", prompt: "つまり、次回ワークブックの12ページをやってくればいいんですね？", answer: "So, you mean we should review page 12 for next time?", lesson: "PC1105", hint: "So, you mean we should ~?", note: "結論だけオウム返し", tag: "確認", priority: 1 },
@@ -3091,7 +3102,7 @@ const JE_QUOTA = 21;
 /* 補充の優先順: RECENT（最近追加した問題）→ PRIORITY_UNITS の英作文 → 文の変形 → 英作文の枠 → その他。
    覚えていない分を順に1周に入れる。ただし最新の段だけで埋めず、OLD_QUOTA 件は一つ前の段以降（少し古めの問題）から混ぜる。
    問題を追加したら RECENT を書き換える */
-const RECENT_LESSONS = [["C1", "WG1117", "V1", "18", "DR1115", "17", "EC1112", "PH1", "unit:indirectq", "unit:reladv", "unit:relpro", "unit:prep", "unit:word", "unit:pp3", "unit:inf4"], ["16", "EC1110", "EC1110B"], "PC1105", ["EC1104", "EC1104B"], "EC1027"]; // "unit:〜" は英作文の単元 // 最近追加したレッスン（先頭ほど先に出す。配列は同じ段）
+const RECENT_LESSONS = [["EC1118", "C1", "WG1117", "V1", "18", "DR1115", "17", "EC1112", "PH1", "unit:indirectq", "unit:reladv", "unit:relpro", "unit:prep", "unit:word", "unit:pp3", "unit:inf4"], ["16", "EC1110", "EC1110B"], "PC1105", ["EC1104", "EC1104B"], "EC1027"]; // "unit:〜" は英作文の単元 // 最近追加したレッスン（先頭ほど先に出す。配列は同じ段）
 const RECENT_UNITS = ["cushion", "there", "partic", "talk"]; // 最近追加した英作文の単元（レッスンの次）
 const PRIORITY_UNITS = ["can", "ableto", "must", "haveto"];
 /* 1周のうち、最新の段（RECENT_LESSONS の先頭）以外から入れる数と、そのうち同じ段から入れる上限 */
@@ -3099,7 +3110,7 @@ const OLD_QUOTA = 8, OLD_CAP = 4;
 const DECK_RULE = 14;  // 補充ルールの版。変えると次回に1周分を組み直す
 /* 1日に覚える目標数。「今日 あと N」として表示し、ホーム画面のアイコンのバッジにも出す（対応端末のみ） */
 const DAILY_GOAL = 100;
-const APP_VER = "106";   // 診断表示用
+const APP_VER = "107";   // 診断表示用
 
 const UNITS = { ...COMPOSE_UNITS, ...PRON_UNITS, ...QUIZ_UNITS };
 const tagNote = (s) => [s.lesson ? "Lesson " + s.lesson : "", s.tag ? "文法: " + s.tag : "", s.note || ""].filter(Boolean).join(" · ");
