@@ -6318,19 +6318,7 @@
   // new window is not allowed (some frames), the text is copied instead.
   function askPrompt(item) {
     const pos = posLabel(item.p).split(" ")[1] || item.p;
-    const lines = [
-      "英単語「" + item.w + "」（" + pos + "：" + item.m + "）について、英語学習者向けに日本語で解説してください。",
-      "",
-      "知りたいこと：",
-      "1. 中心となるイメージとニュアンス（似た意味の語との違いも）",
-      "2. よく使う形・コロケーション（3つ）",
-      "3. 例文を3つ（TOEIC や仕事の場面で、日本語訳つき）",
-      "4. 覚え方のコツ（語源や連想）",
-    ];
-    if (item.ph) lines.push("", "発音記号: /" + item.ph + "/");
-    if (item.c) lines.push("チャンク: " + item.c);
-    if (item.t) lines.push("手元のヒント: " + item.t);
-    return lines.join("\n");
+    return "英単語「" + item.w + "」（" + pos + "：" + item.m + "）を短く解説して。ニュアンスと、例文を2つ（日本語訳つき）。";
   }
   function askClaude() {
     const item = current();
