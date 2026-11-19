@@ -3069,6 +3069,27 @@ const QUESTIONS = [
   { id: "PC1105-33", type: "trans", prompt: "彼女は今では前よりずっと英語を楽しんでいます。", answer: "She enjoys English much more now.", lesson: "PC1105", hint: "much more now", note: "now が「以前と比べて今は」という変化を表す", tag: "比較級", priority: 1 },
   // Lesson PC1105: カタカナ発音
   { id: "PC1105-34", type: "kana", prompt: "much more now", answer: "マッチ [モ]ア ナウ", lesson: "PC1105", hint: "more を強く", note: "much と more はつなげて一息で", tag: "発音", priority: 2 },
+  // Lesson WB1117: 和文英訳
+  { id: "WB1117-01", type: "trans", prompt: "同僚と行き違いがあり、彼女がお客様に過剰請求してしまいました。", answer: "I had a misunderstanding with a colleague, and she overcharged a customer.", lesson: "WB1117", hint: "a misunderstanding / 過去形", note: "冠詞 a を忘れない。overcharge の後に to は不要", tag: "仕事トラブル", priority: 1 },
+  { id: "WB1117-02", type: "trans", prompt: "正しい金額を計算し、翌日お客様に返金しました。", answer: "We calculated the correct price and refunded the customer the following day.", lesson: "WB1117", hint: "過去形2つ / 翌日", note: "過去の話は全部過去形。the other day は「先日」の意味なので使わない", tag: "仕事トラブル", priority: 1 },
+  { id: "WB1117-03", type: "trans", prompt: "私は普段あまり怒りません。", answer: "I don't usually get angry.", lesson: "WB1117", hint: "get＋形容詞", note: "angry は形容詞なので動詞 get を補う", tag: "性格", priority: 1 },
+  { id: "WB1117-04", type: "trans", prompt: "このレッスンの後、テニスをする予定です。", answer: "I will play tennis after this lesson.", lesson: "WB1117", hint: "これからの予定", note: "今受けているレッスンなので that → this", tag: "予定", priority: 1 },
+  // Lesson WB1117: 誤文訂正
+  { id: "WB1117-05", type: "correct", prompt: "I have play tennis after that lesson.", answer: "I will play tennis after this lesson.", lesson: "WB1117", hint: "時制と指示語", note: "have＋原形は誤り。未来の予定は will play", tag: "予定", priority: 1 },
+  { id: "WB1117-06", type: "correct", prompt: "I had misunderstanding with a colleague, so she overcharge to customer.", answer: "I had a misunderstanding with a colleague, and she overcharged a customer.", lesson: "WB1117", hint: "冠詞・時制・前置詞", note: "3か所を直す：a／overcharged／to を取る", tag: "仕事トラブル", priority: 1 },
+  { id: "WB1117-07", type: "correct", prompt: "I don't usually angry.", answer: "I don't usually get angry.", lesson: "WB1117", hint: "動詞が足りない", note: "don't の後には動詞が必要", tag: "性格", priority: 1 },
+  // Lesson WB1117: 穴埋め
+  { id: "WB1117-08", type: "blank", prompt: "I had (   ) misunderstanding with a colleague.", answer: "a", lesson: "WB1117", hint: "冠詞", note: "misunderstanding は数えられる名詞", tag: "仕事トラブル", priority: 2 },
+  { id: "WB1117-09", type: "blank", prompt: "We refunded the customer the (   ) day.", answer: "following", lesson: "WB1117", hint: "翌日", note: "過去の話の「翌日」は the following day（next day も可）", tag: "仕事トラブル", priority: 1 },
+  { id: "WB1117-10", type: "blank", prompt: "To make a long story (   ), we refunded the customer.", answer: "short", lesson: "WB1117", hint: "手短に言うと", note: "長い経緯をまとめるときの時間稼ぎフレーズ", tag: "CSフレーズ", priority: 2 },
+  // Lesson WB1117: 和文英訳
+  { id: "WB1117-11", type: "trans", prompt: "少し考えさせてください。", answer: "Let me think for a second.", lesson: "WB1117", hint: "Let me 〜", note: "so でつなぎそうになったら、これで間をとる", tag: "CSフレーズ", priority: 2 },
+  // Lesson WB1117: カタカナ発音
+  { id: "WB1117-12", type: "kana", prompt: "colleague", answer: "[カ]リーグ", lesson: "WB1117", hint: "第1音節が強い", note: "「コリーグ」より「カ」寄り。語尾の g は軽く添える", tag: "発音", priority: 1 },
+  { id: "WB1117-13", type: "kana", prompt: "refund (verb)", answer: "リ[ファ]ンド", lesson: "WB1117", hint: "名詞と動詞で強勢が違う", note: "動詞 /rɪˈfʌnd/ はファに強勢、名詞 /ˈriː.fʌnd/ は「リーファンド」", tag: "発音", priority: 2 },
+  { id: "WB1117-14", type: "kana", prompt: "refunded", answer: "リ[ファ]ンディッド", lesson: "WB1117", hint: "動詞の過去形", note: "語尾の ed は「ディッド」。ファを強く（動詞の過去形は /rɪˈfʌn.dɪd/）", tag: "発音", priority: 2 },
+  { id: "WB1117-15", type: "kana", prompt: "overcharged", answer: "オウヴァ[チャ]ージド", lesson: "WB1117", hint: "強勢は charge", note: "語尾は「ド」を軽く。「オーバー」とはっきり言わない", tag: "発音", priority: 2 },
+  { id: "WB1117-16", type: "kana", prompt: "misunderstanding", answer: "ミスアンダ[スタ]ンディング", lesson: "WB1117", hint: "強勢は stand", note: "長い単語は強勢1か所を決めると言いやすい", tag: "発音", priority: 2 },
   // Lesson WG1117: 和文英訳
   { id: "WG1117-01", type: "trans", prompt: "ケーキとアイスクリーム、どちらがいいですか？", answer: "Which is better, ice cream or cake?", lesson: "WG1117", hint: "Which is better, A or B?", note: "Comparison Game の問い。答えは PREP（意見→理由→説明→意見）で", tag: "Why Game", priority: 2 },
   { id: "WG1117-02", type: "trans", prompt: "ケーキよりアイスクリームのほうがいいです。", answer: "Ice cream is better than cake.", lesson: "WG1117", hint: "比較級 better than", note: "意見（Point）。I think を付けてもよい", tag: "Why Game", priority: 1 },
@@ -3118,7 +3139,7 @@ const JE_QUOTA = 21;
 /* 補充の優先順: RECENT（最近追加した問題）→ PRIORITY_UNITS の英作文 → 文の変形 → 英作文の枠 → その他。
    覚えていない分を順に1周に入れる。ただし最新の段だけで埋めず、OLD_QUOTA 件は一つ前の段以降（少し古めの問題）から混ぜる。
    問題を追加したら RECENT を書き換える */
-const RECENT_LESSONS = [["EC1118", "C1", "WG1117", "V1", "18", "DR1115", "17", "EC1112", "PH1", "unit:indirectq", "unit:reladv", "unit:relpro", "unit:prep", "unit:word", "unit:pp3", "unit:inf4"], ["16", "EC1110", "EC1110B"], "PC1105", ["EC1104", "EC1104B"], "EC1027"]; // "unit:〜" は英作文の単元 // 最近追加したレッスン（先頭ほど先に出す。配列は同じ段）
+const RECENT_LESSONS = [["EC1118", "WB1117", "C1", "WG1117", "V1", "18", "DR1115", "17", "EC1112", "PH1", "unit:indirectq", "unit:reladv", "unit:relpro", "unit:prep", "unit:word", "unit:pp3", "unit:inf4"], ["16", "EC1110", "EC1110B"], "PC1105", ["EC1104", "EC1104B"], "EC1027"]; // "unit:〜" は英作文の単元 // 最近追加したレッスン（先頭ほど先に出す。配列は同じ段）
 const RECENT_UNITS = ["cushion", "there", "partic", "talk"]; // 最近追加した英作文の単元（レッスンの次）
 const PRIORITY_UNITS = ["can", "ableto", "must", "haveto"];
 /* 1周のうち、最新の段（RECENT_LESSONS の先頭）以外から入れる数と、そのうち同じ段から入れる上限 */
@@ -3126,7 +3147,7 @@ const OLD_QUOTA = 8, OLD_CAP = 4;
 const DECK_RULE = 14;  // 補充ルールの版。変えると次回に1周分を組み直す
 /* 1日に覚える目標数。「今日 あと N」として表示し、ホーム画面のアイコンのバッジにも出す（対応端末のみ） */
 const DAILY_GOAL = 100;
-const APP_VER = "113";   // 診断表示用
+const APP_VER = "114";   // 診断表示用
 
 const UNITS = { ...COMPOSE_UNITS, ...PRON_UNITS, ...QUIZ_UNITS };
 const tagNote = (s) => [s.lesson ? "Lesson " + s.lesson : "", s.tag ? "文法: " + s.tag : "", s.note || ""].filter(Boolean).join(" · ");
