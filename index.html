@@ -3147,7 +3147,7 @@ const OLD_QUOTA = 8, OLD_CAP = 4;
 const DECK_RULE = 14;  // 補充ルールの版。変えると次回に1周分を組み直す
 /* 1日に覚える目標数。「今日 あと N」として表示し、ホーム画面のアイコンのバッジにも出す（対応端末のみ） */
 const DAILY_GOAL = 100;
-const APP_VER = "114";   // 診断表示用
+const APP_VER = "115";   // 診断表示用
 
 const UNITS = { ...COMPOSE_UNITS, ...PRON_UNITS, ...QUIZ_UNITS };
 const tagNote = (s) => [s.lesson ? "Lesson " + s.lesson : "", s.tag ? "文法: " + s.tag : "", s.note || ""].filter(Boolean).join(" · ");
@@ -4080,14 +4080,12 @@ el.sheetBtn.addEventListener("click", () => reveal());
    開けない枠の中ではクリップボードにコピーする */
 function askPrompt(s) {
   const k = KINDS[s.kind];
-  const lines = ["英語学習アプリの問題について、日本語で解説してください。", "",
-    "問題の種類: " + (UNITS[s.unit]?.label || s.kind),
+  const isKana = s.kind === "kana" || s.kind === "pron";
+  const lines = ["次の英語の問題を、やさしく短く解説してください。ポイントは1つか2つ、全体で3〜4行まで。箇条書きの網羅や言い換えの列挙は不要です。", "",
     "問題: " + (k.prompt ? k.prompt(s) : ""),
     "答え: " + (s.en ?? s.answer ?? "")];
-  if (s.hint) lines.push("ヒント: " + s.hint);
-  if (s.tag) lines.push("文法: " + s.tag);
-  if (s.note) lines.push("メモ: " + s.note);
-  lines.push("", "知りたいこと: 文法・語法のポイント、日本人が間違えやすい点、ほかの自然な言い方、発音のコツ（音のつながりと強勢）。簡潔にお願いします。");
+  if (s.note) lines.push("補足: " + s.note);
+  lines.push("", isKana ? "発音のコツ（強勢と音のつながり）を中心に。" : "なぜこの形になるのか、どこでつまずきやすいかを中心に。");
   return lines.join("\n");
 }
 let askText = "";
