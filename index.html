@@ -199,6 +199,7 @@
   }
   .notice[hidden] { display: none; }
   .notice span { display: block; white-space: pre-wrap; overflow-wrap: anywhere; color: #fff; }
+  .notice .notice-act { float: none; display: inline-block; margin: 10px 0 0; padding: 8px 14px; font-size: 13px; background: #fff; color: #1c2430; border-radius: 999px; }
   .notice button { float: right; margin: -4px -6px 0 10px; padding: 4px 8px; background: rgba(255,255,255,.12); border: 0; border-radius: 8px; color: #fff; font-size: 18px; line-height: 1; cursor: pointer; }
   .stamp {
     position: absolute; inset: 0; z-index: 5;
@@ -787,7 +788,7 @@
     <button class="link" id="progressBtn" type="button">一覧</button>
     <button class="link" id="resetBtn" type="button">最初から</button>
     <button class="link" id="badgeBtn" type="button">バッジ</button>
-    <div class="notice jp" id="notice" hidden><button type="button" id="noticeClose" aria-label="閉じる">×</button><span id="noticeText"></span></div>
+    <div class="notice jp" id="notice" hidden><button type="button" id="noticeClose" aria-label="閉じる">×</button><span id="noticeText"></span><button type="button" class="notice-act" id="noticeCopy" hidden>質問文をコピー</button></div>
     <span class="sync" id="sync">この端末に記憶</span>
   </footer>
 </div>
@@ -3125,7 +3126,7 @@ const OLD_QUOTA = 8, OLD_CAP = 4;
 const DECK_RULE = 14;  // 補充ルールの版。変えると次回に1周分を組み直す
 /* 1日に覚える目標数。「今日 あと N」として表示し、ホーム画面のアイコンのバッジにも出す（対応端末のみ） */
 const DAILY_GOAL = 100;
-const APP_VER = "112";   // 診断表示用
+const APP_VER = "113";   // 診断表示用
 
 const UNITS = { ...COMPOSE_UNITS, ...PRON_UNITS, ...QUIZ_UNITS };
 const tagNote = (s) => [s.lesson ? "Lesson " + s.lesson : "", s.tag ? "文法: " + s.tag : "", s.note || ""].filter(Boolean).join(" · ");
@@ -3224,7 +3225,7 @@ const el = {
   restoreBtn: $("restoreBtn"),
   nDone: $("nDone"), nHalf: $("nHalf"), nTodo: $("nTodo"), barDone: $("barDone"), barHalf: $("barHalf"),
   nToday: $("nToday"), nGoal: $("nGoal"), nLeft: $("nLeft"), badgeBtn: $("badgeBtn"),
-  notice: $("notice"), noticeText: $("noticeText"), noticeClose: $("noticeClose"),
+  notice: $("notice"), noticeText: $("noticeText"), noticeClose: $("noticeClose"), noticeCopy: $("noticeCopy"),
   roundPos: $("roundPos"), roundTotal: $("roundTotal"), statusNums: $("statusNums"),
   progress: $("progress"), progressBtn: $("progressBtn"), sync: $("sync"),
   timer: $("timer"), timerText: $("timerText"), timerBar: $("timerBar"), gauge: $("gauge"),
@@ -4068,17 +4069,26 @@ function askPrompt(s) {
   lines.push("", "知りたいこと: 文法・語法のポイント、日本人が間違えやすい点、ほかの自然な言い方、発音のコツ（音のつながりと強勢）。簡潔にお願いします。");
   return lines.join("\n");
 }
+let askText = "";
 function askClaude() {
   if (state.current == null) return;
-  const text = askPrompt(ITEMS[state.current]);
-  const url = "https://claude.ai/new?q=" + encodeURIComponent(text);
-  let w = null;
-  try { w = window.open(url, "_blank", "noopener"); } catch {}
-  if (w) return;
-  const copied = () => showNotice("Claude を開けなかったので、質問文をコピーしました。Claude に貼り付けて送ってください。");
-  if (navigator.clipboard?.writeText) navigator.clipboard.writeText(text).then(copied).catch(() => showNotice(text));
-  else showNotice(text);
+  askText = askPrompt(ITEMS[state.current]);
+  const url = "https://claude.ai/new?q=" + encodeURIComponent(askText);
+  // リンクとして開く（iPhone のホーム画面アプリでは window.open の返り値が当てにならないので、開けたかどうかは判定しない。
+  // クリップボードには勝手にコピーしない。開けなかったときだけ下の「コピー」を押してもらう）
+  const a = document.createElement("a");
+  a.href = url; a.target = "_blank"; a.rel = "noopener";
+  document.body.appendChild(a); a.click(); a.remove();
+  if (window.self !== window.top) {                           // 枠の中では開けないことがあるので、コピーの手段を出す
+    showNotice("Claude を開きました。開かない場合は「質問文をコピー」を押して、Claude に貼り付けてください。");
+    el.noticeCopy.hidden = false;
+  }
 }
+el.noticeCopy.addEventListener("click", async () => {
+  try { await navigator.clipboard.writeText(askText); showNotice("質問文をコピーしました。Claude に貼り付けて送ってください。"); }
+  catch { showNotice(askText); }
+  el.noticeCopy.hidden = true;
+});
 el.askBtn.addEventListener("click", askClaude);
 el.okBtn.addEventListener("click", () => grade(true));
 el.againBtn.addEventListener("click", () => grade(false));
@@ -4105,7 +4115,7 @@ async function badgeDiag(extra) {
   }
   return lines.join("\n");
 }
-function showNotice(text) { el.noticeText.textContent = text; el.notice.hidden = false; }
+function showNotice(text) { el.noticeText.textContent = text; el.notice.hidden = false; el.noticeCopy.hidden = true; }
 el.noticeClose.addEventListener("click", () => { el.notice.hidden = true; });
 const withTimeout = (p, ms) => Promise.race([p, new Promise(r => setTimeout(() => r("（応答なし）"), ms))]);
 el.badgeBtn.addEventListener("click", async () => {
