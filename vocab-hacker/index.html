@@ -6326,6 +6326,15 @@
     if (!item) return;
     const text = askPrompt(item);
     const url = "https://claude.ai/new?q=" + encodeURIComponent(text);
+    // As a home-screen app, a new window opens iOS's in-app browser, which is
+    // left behind as a blank sheet once the Claude app takes the link over.
+    // The share sheet hands the question straight to the Claude app instead
+    // and leaves nothing behind.
+    const standalone = navigator.standalone === true || (window.matchMedia && window.matchMedia("(display-mode: standalone)").matches);
+    if (standalone && navigator.share) {
+      navigator.share({ text: text }).catch(() => {});
+      return;
+    }
     let w = null;
     try { w = window.open(url, "_blank", "noopener"); } catch (e) { w = null; }
     if (w) return;
