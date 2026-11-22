@@ -784,7 +784,7 @@
       </select>
     </label>
     <button class="link" id="restoreBtn" type="button">覚えた文を戻す</button>
-    <label for="autoSpeak"><input type="checkbox" id="autoSpeak" checked> 時間切れで読み上げ</label>
+    <label for="autoSpeak"><input type="checkbox" id="autoSpeak" checked> 答えを開いたら読み上げ</label>
     <button class="link" id="progressBtn" type="button">一覧</button>
     <button class="link" id="resetBtn" type="button">最初から</button>
     <button class="link" id="badgeBtn" type="button">バッジ</button>
@@ -3147,7 +3147,7 @@ const OLD_QUOTA = 8, OLD_CAP = 4;
 const DECK_RULE = 14;  // 補充ルールの版。変えると次回に1周分を組み直す
 /* 1日に覚える目標数。「今日 あと N」として表示し、ホーム画面のアイコンのバッジにも出す（対応端末のみ） */
 const DAILY_GOAL = 100;
-const APP_VER = "115";   // 診断表示用
+const APP_VER = "116";   // 診断表示用
 
 const UNITS = { ...COMPOSE_UNITS, ...PRON_UNITS, ...QUIZ_UNITS };
 const tagNote = (s) => [s.lesson ? "Lesson " + s.lesson : "", s.tag ? "文法: " + s.tag : "", s.note || ""].filter(Boolean).join(" · ");
@@ -3509,7 +3509,7 @@ function reveal(auto = false) {
   setActions("revealed");
   fitPrompt();
   el.okBtn.focus({ preventScroll: true });
-  if (auto && el.autoSpeak.checked) playPrimed();   // 時間切れで開いたときは答えを読み上げる
+  if (el.autoSpeak.checked) playPrimed();           // 答えを開いたら（時間切れでも、自分で開いても）その場で読み上げる
   else dropPrimed();
 }
 
