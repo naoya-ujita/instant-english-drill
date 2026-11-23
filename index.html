@@ -3024,6 +3024,44 @@ const QUESTIONS = [
   // Lesson EC1118: カタカナ発音
   { id: "EC1118-07", type: "kana", prompt: "I'd be happy to work on it", answer: "アイビ [ハ]ピタ [ワー]コニッ", lesson: "EC1118", hint: "happy と work を強く", note: "I'd は d を軽く添えて be につなげ「アイビ」。happy to は to を弱く「ハピタ」。work on it は k が on に、n が it にくっついて「ワーコニッ」。最後の t はほぼ聞こえない", tag: "発音", priority: 1 },
   { id: "EC1118-08", type: "kana", prompt: "work on it", answer: "[ワー]コニッ", lesson: "EC1118", hint: "3語をつなげる", note: "work の k が on に、on の n が it にくっつく。オーバーラッピングでは I'd を言いそびれやすいので「アイビ」をひとかたまりで出す", tag: "発音", priority: 1 },
+  // Lesson EC1123: 誤文訂正
+  { id: "EC1123-C01", type: "correct", prompt: "If possible, to a later replacement.", answer: "Is it possible to arrange a replacement?", lesson: "EC1123", hint: "疑問文の形", note: "arrange＝手配する", tag: "ITサポート", priority: 1 },
+  { id: "EC1123-C02", type: "correct", prompt: "What adjustment need to be made by the marketing firm?", answer: "What adjustments need to be made to the marketing plan?", lesson: "EC1123", hint: "adjustments（複数形）／to the marketing plan", note: "firm（会社）ではなく plan（計画）", tag: "マーケティング", priority: 1 },
+  { id: "EC1123-C03", type: "correct", prompt: "I booked flight to New York for Detail Team.", answer: "I booked flights to New York for the sales team.", lesson: "EC1123", hint: "flights（複数形）／sales team", note: "Detail は sales の聞き違い", tag: "出張", priority: 2 },
+  { id: "EC1123-C04", type: "correct", prompt: "flight having delayed.", answer: "The flights have been delayed.", lesson: "EC1123", hint: "現在完了受動態", note: "have been ＋ 過去分詞", tag: "出張", priority: 2 },
+  // Lesson EC1123: 和文英訳
+  { id: "EC1123-E01", type: "trans", prompt: "来年度の予算を最終決定しなければなりません。", answer: "We need to finalize our budget for the next fiscal year.", lesson: "EC1123", hint: "finalize（最終決定する）", note: "「終わらせる」と訳していた", tag: "予算・ビジネス", priority: 1 },
+  { id: "EC1123-E02", type: "trans", prompt: "全部署はレポートを提出しましたか？", answer: "Have all the departments submitted their reports?", lesson: "EC1123", hint: "現在完了の疑問文", note: "submit＝提出する", tag: "予算・ビジネス", priority: 2 },
+  { id: "EC1123-E03", type: "trans", prompt: "1つを除いて全部です。", answer: "All but one.", lesson: "EC1123", hint: "but は「〜を除いて」", note: "but の意味を確認した", tag: "予算・ビジネス", priority: 2 },
+  { id: "EC1123-E04", type: "trans", prompt: "ITは数字をまだ最終調整中です。", answer: "The IT department is still finalizing their numbers.", lesson: "EC1123", hint: "still ＋ 現在進行形", note: "still の位置に注意", tag: "予算・ビジネス", priority: 1 },
+  { id: "EC1123-E05", type: "trans", prompt: "彼らから最新情報は聞いていますか？", answer: "Have you heard any updates from them?", lesson: "EC1123", hint: "any updates（最新情報）", note: "update は「最新情報」の意味", tag: "予算・ビジネス", priority: 2 },
+  { id: "EC1123-E06", type: "trans", prompt: "ITはプロジェクトが予測不能なので、いつも土壇場で調整があります。", answer: "They always have last-minute adjustments because of how unpredictable their projects are.", lesson: "EC1123", hint: "because of how ＋ 主語 ＋ 動詞", note: "last-minute＝土壇場の", tag: "予算・ビジネス", priority: 1 },
+  { id: "EC1123-E07", type: "trans", prompt: "今週末まで待ちましょう。", answer: "Let's give them until the end of the week.", lesson: "EC1123", hint: "give them until", note: "until the end of the week で期限を表す", tag: "予算・ビジネス", priority: 2 },
+  { id: "EC1123-E08", type: "trans", prompt: "その間に、他のレポートをまとめ始めてくれますか？", answer: "Meanwhile, can you start compiling the other reports?", lesson: "EC1123", hint: "compile（集める・まとめる）", note: "meanwhile＝その間に", tag: "予算・ビジネス", priority: 1 },
+  { id: "EC1123-E09", type: "trans", prompt: "ITにも連絡して、スピードアップのために助けが必要か確認します。", answer: "I'll also check in with IT and see if they need any help to speed things up.", lesson: "EC1123", hint: "check in with（連絡を取る）", note: "see if ～＝～かどうか確かめる", tag: "予算・ビジネス", priority: 1 },
+  { id: "EC1123-E10", type: "trans", prompt: "経営幹部レビューに向けて、すべてが準備万端であるようにしなければなりません。", answer: "We need to ensure everything is in place for the executive review.", lesson: "EC1123", hint: "ensure（確実にする）／in place（準備が整って）", note: "executive review＝経営幹部レビュー", tag: "予算・ビジネス", priority: 1 },
+  { id: "EC1123-E11", type: "trans", prompt: "新しいマーケティングキャンペーンは経営陣に承認されましたか？", answer: "Has the marketing campaign been approved by management?", lesson: "EC1123", hint: "現在完了受動態", note: "management＝経営陣", tag: "ビジネス", priority: 2 },
+  { id: "EC1123-E12", type: "trans", prompt: "忙しいので、外食のほうが好きです。", answer: "I prefer eating out, because I'm always busy.", lesson: "EC1123", hint: "prefer A because B", note: "prefer ～ing の形", tag: "スピーキング", priority: 2 },
+  { id: "EC1123-E13", type: "trans", prompt: "料理も皿洗いもしなくていいからです。", answer: "I don't have to cook, and I don't have to wash the dishes.", lesson: "EC1123", hint: "don't have to", note: "have to の否定は「不要」", tag: "スピーキング", priority: 3 },
+  { id: "EC1123-E14", type: "trans", prompt: "電子書籍なら、知りたいことをすぐ検索できます。", answer: "With e-books, I can search for what I want to know right away.", lesson: "EC1123", hint: "search for ～", note: "right away＝すぐに", tag: "スピーキング", priority: 3 },
+  // Lesson EC1123: 穴埋め
+  { id: "EC1123-F01", type: "blank", prompt: "We need to ___ our budget for the next fiscal year.", answer: "finalize", lesson: "EC1123", hint: "「最終決定する」", note: "finalize を使う", tag: "予算・ビジネス", priority: 2 },
+  { id: "EC1123-F02", type: "blank", prompt: "All but ___.", answer: "one", lesson: "EC1123", hint: "「1つを除いて」", note: "all but one の定型", tag: "予算・ビジネス", priority: 2 },
+  { id: "EC1123-F03", type: "blank", prompt: "Let's give them until the ___ of the week.", answer: "end", lesson: "EC1123", hint: "「週末」", note: "end of the week", tag: "予算・ビジネス", priority: 2 },
+  { id: "EC1123-F04", type: "blank", prompt: "They always have last-minute ___.", answer: "adjustments", lesson: "EC1123", hint: "複数形", note: "「調整」は複数で使う", tag: "予算・ビジネス", priority: 1 },
+  { id: "EC1123-F05", type: "blank", prompt: "I'll also check ___ with IT.", answer: "in", lesson: "EC1123", hint: "check in with", note: "「連絡を取る」の句動詞", tag: "予算・ビジネス", priority: 1 },
+  // Lesson EC1123: カタカナ発音
+  { id: "EC1123-P01", type: "kana", prompt: "considerable", answer: "コン[シ]ダラブル", lesson: "EC1123", hint: "「sid」を強く", note: "授業では「コンシダラブリ」と読んでいた。最後は「ブル」", tag: "語彙・発音", priority: 1 },
+  { id: "EC1123-P02", type: "kana", prompt: "vigorous", answer: "[ヴィ]ゴラス", lesson: "EC1123", hint: "「vi」を強めに", note: "ビゴラスとも聞こえる。意味は「精力的な」", tag: "語彙・発音", priority: 2 },
+  { id: "EC1123-P03", type: "kana", prompt: "accounting", answer: "ア[カウ]ンティング", lesson: "EC1123", hint: "a-COUN-ting の「カウ」を強く", note: "意味は「会計」", tag: "語彙・発音", priority: 2 },
+  { id: "EC1123-P04", type: "kana", prompt: "compound", answer: "[カ]ンパウンド", lesson: "EC1123", hint: "名詞なので前の「カン」を強く", note: "「コンパン」と読んでいた。意味は「化合物」", tag: "語彙・発音", priority: 1 },
+  { id: "EC1123-P05", type: "kana", prompt: "skim", answer: "[スキ]ム", lesson: "EC1123", hint: "短く「ス・キ・ム」", note: "「スキーム」と混同しない。意味は「拾い読みする」", tag: "語彙・発音", priority: 2 },
+  { id: "EC1123-P06", type: "kana", prompt: "density", answer: "[デ]ンシティ", lesson: "EC1123", hint: "「デ」を強く", note: "「ティ」は伸ばさず短く", tag: "語彙・発音", priority: 3 },
+  { id: "EC1123-P07", type: "kana", prompt: "promptly", answer: "[プロ]ンプトリー", lesson: "EC1123", hint: "PROMPT-ly の「プロ」を強く", note: "語末の ly は「リー」に近く軽く。意味は「即時に」", tag: "語彙・発音", priority: 2 },
+  { id: "EC1123-P08", type: "kana", prompt: "unpredictable", answer: "アンプリ[ディ]クタブル", lesson: "EC1123", hint: "-DIC- の「ディ」を強く", note: "意味は「予測できない」", tag: "語彙・発音", priority: 2 },
+  { id: "EC1123-P09", type: "kana", prompt: "executive", answer: "イグ[ゼ]キュティブ", lesson: "EC1123", hint: "ig-ZEK の「ゼ」を強く", note: "「エグゼクティブ」より「イグゼ」が原音に近い", tag: "語彙・発音", priority: 2 },
+  { id: "EC1123-P10", type: "kana", prompt: "finalize", answer: "[ファイ]ナライズ", lesson: "EC1123", hint: "「ファイ」を強く", note: "語末 -ize は「ズ」", tag: "語彙・発音", priority: 2 },
+  { id: "EC1123-P11", type: "kana", prompt: "fiscal", answer: "[フィ]スカル", lesson: "EC1123", hint: "「フィ」を強く", note: "「フィスカ」と言っていた。fiscal year は「会計年度」", tag: "語彙・発音", priority: 1 },
   // Lesson PC1105: 和文英訳
   { id: "PC1105-01", type: "trans", prompt: "すみません、今のお話は私宛てでしたか、それとも娘宛てでしたか？", answer: "Sorry, was that for me or for my daughter?", lesson: "PC1105", hint: "was that for ~ or ~", note: "誰宛てか分からないときの安全弁", tag: "聞き返し", priority: 1 },
   { id: "PC1105-02", type: "trans", prompt: "つまり、次回ワークブックの12ページをやってくればいいんですね？", answer: "So, you mean we should review page 12 for next time?", lesson: "PC1105", hint: "So, you mean we should ~?", note: "結論だけオウム返し", tag: "確認", priority: 1 },
@@ -3139,7 +3177,7 @@ const JE_QUOTA = 21;
 /* 補充の優先順: RECENT（最近追加した問題）→ PRIORITY_UNITS の英作文 → 文の変形 → 英作文の枠 → その他。
    覚えていない分を順に1周に入れる。ただし最新の段だけで埋めず、OLD_QUOTA 件は一つ前の段以降（少し古めの問題）から混ぜる。
    問題を追加したら RECENT を書き換える */
-const RECENT_LESSONS = [["EC1118", "WB1117", "C1", "WG1117", "V1", "18", "DR1115", "17", "EC1112", "PH1", "unit:indirectq", "unit:reladv", "unit:relpro", "unit:prep", "unit:word", "unit:pp3", "unit:inf4"], ["16", "EC1110", "EC1110B"], "PC1105", ["EC1104", "EC1104B"], "EC1027"]; // "unit:〜" は英作文の単元 // 最近追加したレッスン（先頭ほど先に出す。配列は同じ段）
+const RECENT_LESSONS = [["EC1123", "EC1118", "WB1117", "C1", "WG1117", "V1", "18", "DR1115", "17", "EC1112", "PH1", "unit:indirectq", "unit:reladv", "unit:relpro", "unit:prep", "unit:word", "unit:pp3", "unit:inf4"], ["16", "EC1110", "EC1110B"], "PC1105", ["EC1104", "EC1104B"], "EC1027"]; // "unit:〜" は英作文の単元 // 最近追加したレッスン（先頭ほど先に出す。配列は同じ段）
 const RECENT_UNITS = ["cushion", "there", "partic", "talk"]; // 最近追加した英作文の単元（レッスンの次）
 const PRIORITY_UNITS = ["can", "ableto", "must", "haveto"];
 /* 1周のうち、最新の段（RECENT_LESSONS の先頭）以外から入れる数と、そのうち同じ段から入れる上限 */
@@ -3147,7 +3185,7 @@ const OLD_QUOTA = 8, OLD_CAP = 4;
 const DECK_RULE = 14;  // 補充ルールの版。変えると次回に1周分を組み直す
 /* 1日に覚える目標数。「今日 あと N」として表示し、ホーム画面のアイコンのバッジにも出す（対応端末のみ） */
 const DAILY_GOAL = 100;
-const APP_VER = "116";   // 診断表示用
+const APP_VER = "117";   // 診断表示用
 
 const UNITS = { ...COMPOSE_UNITS, ...PRON_UNITS, ...QUIZ_UNITS };
 const tagNote = (s) => [s.lesson ? "Lesson " + s.lesson : "", s.tag ? "文法: " + s.tag : "", s.note || ""].filter(Boolean).join(" · ");
