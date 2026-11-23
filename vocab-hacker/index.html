@@ -6318,7 +6318,7 @@
   // new window is not allowed (some frames), the text is copied instead.
   function askPrompt(item) {
     const pos = posLabel(item.p).split(" ")[1] || item.p;
-    return "英単語「" + item.w + "」（" + pos + "：" + item.m + "）を短く解説して。ニュアンスと、例文を2つ（日本語訳つき）。" +
+    return "英単語「" + item.w + "」（" + pos + "：" + item.m + "）を短く解説して。ニュアンスと、短い例文を1つ（日本語訳つき）。" +
       (item.c ? "チャンク「" + item.c + "」の意味も。" : "") + "覚え方も、語源か連想で具体的に。";
   }
   function askClaude() {
