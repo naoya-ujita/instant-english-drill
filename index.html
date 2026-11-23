@@ -3062,6 +3062,40 @@ const QUESTIONS = [
   { id: "EC1123-P09", type: "kana", prompt: "executive", answer: "イグ[ゼ]キュティブ", lesson: "EC1123", hint: "ig-ZEK の「ゼ」を強く", note: "「エグゼクティブ」より「イグゼ」が原音に近い", tag: "語彙・発音", priority: 2 },
   { id: "EC1123-P10", type: "kana", prompt: "finalize", answer: "[ファイ]ナライズ", lesson: "EC1123", hint: "「ファイ」を強く", note: "語末 -ize は「ズ」", tag: "語彙・発音", priority: 2 },
   { id: "EC1123-P11", type: "kana", prompt: "fiscal", answer: "[フィ]スカル", lesson: "EC1123", hint: "「フィ」を強く", note: "「フィスカ」と言っていた。fiscal year は「会計年度」", tag: "語彙・発音", priority: 1 },
+  // Lesson EC1123B: カタカナ発音
+  { id: "EC1123B-P01", type: "kana", prompt: "replacement", answer: "リ[プレ]イスメント", lesson: "EC1123B", hint: "re-PLACE-ment の「プレ」を強く", note: "ITサポートで頻出。r で始め、pl をはっきり", tag: "ITサポート", priority: 1 },
+  { id: "EC1123B-P02", type: "kana", prompt: "persisted", answer: "パー[シ]スティッド", lesson: "EC1123B", hint: "per-SIST-ed の「シ」を強く", note: "語末 -ed は「ティッド」", tag: "ITサポート", priority: 2 },
+  { id: "EC1123B-P03", type: "kana", prompt: "delayed", answer: "ディ[レ]イド", lesson: "EC1123B", hint: "「レイ」を伸ばす", note: "語末 -ed は「ド」", tag: "出張", priority: 2 },
+  { id: "EC1123B-P04", type: "kana", prompt: "freezing", answer: "[フリ]ージング", lesson: "EC1123B", hint: "「フリ」を伸ばす", note: "freeze の ing 形", tag: "ITサポート", priority: 2 },
+  { id: "EC1123B-P05", type: "kana", prompt: "efficiently", answer: "イ[フィ]シェントリー", lesson: "EC1123B", hint: "ef-FI-cient-ly の「フィ」を強く", note: "語末 -ly は「リー」", tag: "会話", priority: 2 },
+  { id: "EC1123B-P06", type: "kana", prompt: "expanding", answer: "イクス[パ]ンディング", lesson: "EC1123B", hint: "ex-PAN-ding の「パン」を強く", note: "授業の market is expanding", tag: "マーケティング", priority: 2 },
+  { id: "EC1123B-P07", type: "kana", prompt: "retirement", answer: "リ[タイ]アメント", lesson: "EC1123B", hint: "re-TIRE-ment の「タイ」を強く", note: "授業の retirement", tag: "会話", priority: 2 },
+  { id: "EC1123B-P08", type: "kana", prompt: "quarter", answer: "[クォ]ーター", lesson: "EC1123B", hint: "「クォ」を短く", note: "quarter＝四半期", tag: "ビジネス", priority: 2 },
+  { id: "EC1123B-P09", type: "kana", prompt: "convenient", answer: "コン[ヴィ]ーニエント", lesson: "EC1123B", hint: "con-VEEN-ient の「ヴィー」を強く", note: "授業で Convenient を話題に。v をはっきり", tag: "会話", priority: 3 },
+  // Lesson EC1123B: 和文英訳
+  { id: "EC1123B-S01", type: "trans", prompt: "IT部門はまだレポートを提出していません。", answer: "The IT department has not yet submitted their report.", lesson: "EC1123B", hint: "has not yet ＋ 過去分詞", note: "授業の「Which department has not yet submitted?」への答え", tag: "Q&A・会話", priority: 1 },
+  { id: "EC1123B-S02", type: "trans", prompt: "私はあまり料理が得意ではありません。", answer: "I'm not good at cooking.", lesson: "EC1123B", hint: "be good at ～", note: "「cooking cooking」と繰り返していた", tag: "会話", priority: 1 },
+  { id: "EC1123B-S03", type: "trans", prompt: "自炊すると、料理にかなり時間がかかります。", answer: "If I cook at home, it takes a lot of time.", lesson: "EC1123B", hint: "if ＋ 現在形、it takes ～", note: "if 節の中は現在形", tag: "会話", priority: 1 },
+  { id: "EC1123B-S04", type: "trans", prompt: "私は子どもの頃から紙の本を読んでいます。", answer: "I've been reading paper books since I was a child.", lesson: "EC1123B", hint: "現在完了進行形", note: "since I was a child で期間を表す", tag: "会話", priority: 2 },
+  { id: "EC1123B-S05", type: "trans", prompt: "紙の本なら、どの色でもいつでも線を引けます。", answer: "With paper books, I can highlight in any color, anytime.", lesson: "EC1123B", hint: "can ＋ 動詞", note: "highlight＝線を引く", tag: "会話", priority: 2 },
+  { id: "EC1123B-S06", type: "trans", prompt: "電子書籍なら、知りたい情報をすぐに検索できます。", answer: "With e-books, I can search for information right away.", lesson: "EC1123B", hint: "search for ～", note: "right away＝すぐに", tag: "会話", priority: 3 },
+  { id: "EC1123B-S07", type: "trans", prompt: "交換品が届くまで、どのくらい時間がかかると思いますか？", answer: "How long do you think it will take to get the replacement?", lesson: "EC1123B", hint: "How long do you think ～?", note: "授業の問いかけ。do you think の後は it will の語順", tag: "ITサポート", priority: 2 },
+  { id: "EC1123B-S08", type: "trans", prompt: "問題は解決せず、続いています。", answer: "The problem has persisted.", lesson: "EC1123B", hint: "persist（続く）", note: "元の文は I've tried both, but the problem has persisted.", tag: "ITサポート", priority: 2 },
+  { id: "EC1123B-S09", type: "trans", prompt: "準備ができたら連絡します。", answer: "I'll let you know when it's ready.", lesson: "EC1123B", hint: "let ＋ 人 ＋ know", note: "電話の締めの一言", tag: "ITサポート", priority: 2 },
+  { id: "EC1123B-S10", type: "trans", prompt: "改訂されたガイドラインは、来期の初めから全支店で実施されます。", answer: "The revised guidelines will be implemented from the start of next quarter in all our branches.", lesson: "EC1123B", hint: "be implemented from ～", note: "implement＝実施する", tag: "ビジネス", priority: 2 },
+  // Lesson EC1123B: 誤文訂正
+  { id: "EC1123B-S11", type: "correct", prompt: "I I'm not good at cooking cooking.", answer: "I'm not good at cooking.", lesson: "EC1123B", hint: "言い直しの重複を消す", note: "会話の詰まりで出た重複", tag: "会話", priority: 1 },
+  { id: "EC1123B-S12", type: "correct", prompt: "Eating out saved me times.", answer: "Eating out saves me time.", lesson: "EC1123B", hint: "現在形・単数形", note: "time（時間）は不可算扱い", tag: "会話", priority: 1 },
+  { id: "EC1123B-S13", type: "correct", prompt: "I prefer paper books down to e-books.", answer: "I prefer paper books to e-books.", lesson: "EC1123B", hint: "prefer A to B", note: "down to ではなく to", tag: "会話", priority: 2 },
+  { id: "EC1123B-S14", type: "correct", prompt: "Because I used to read the paper books since I was child.", answer: "Because I've read paper books since I was a child.", lesson: "EC1123B", hint: "現在完了 ＋ since", note: "the と a の使い分け", tag: "会話", priority: 2 },
+  { id: "EC1123B-S15", type: "correct", prompt: "It is the under review.", answer: "It's still under review.", lesson: "EC1123B", hint: "still ＋ under review", note: "still で「まだ」を表す", tag: "ビジネス", priority: 1 },
+  // Lesson EC1123B: 穴埋め
+  { id: "EC1123B-S16", type: "blank", prompt: "I'm sorry to ___ that.", answer: "hear", lesson: "EC1123B", hint: "I'm sorry to hear that.", note: "相手の不具合に共感する定型", tag: "ITサポート", priority: 1 },
+  { id: "EC1123B-S17", type: "blank", prompt: "How ___ do you think it will take?", answer: "long", lesson: "EC1123B", hint: "期間を聞く", note: "How long do you think ～? の形", tag: "会話", priority: 2 },
+  { id: "EC1123B-S18", type: "blank", prompt: "I'll let you know when it's ___.", answer: "ready", lesson: "EC1123B", hint: "「準備ができたら」", note: "電話の締め", tag: "ITサポート", priority: 2 },
+  { id: "EC1123B-S19", type: "blank", prompt: "I prefer eating out, because I'm always ___.", answer: "busy", lesson: "EC1123B", hint: "理由を述べる", note: "prefer A because B", tag: "会話", priority: 2 },
+  { id: "EC1123B-S20", type: "blank", prompt: "I don't have to cook, and I don't have to ___ the dishes.", answer: "wash", lesson: "EC1123B", hint: "皿洗い", note: "授業で dishes を使っていた", tag: "会話", priority: 2 },
+  { id: "EC1123B-S21", type: "blank", prompt: "Eating out is easy after ___.", answer: "work", lesson: "EC1123B", hint: "after work（仕事の後）", note: "授業で go after work と言っていた", tag: "会話", priority: 3 },
   // Lesson PC1105: 和文英訳
   { id: "PC1105-01", type: "trans", prompt: "すみません、今のお話は私宛てでしたか、それとも娘宛てでしたか？", answer: "Sorry, was that for me or for my daughter?", lesson: "PC1105", hint: "was that for ~ or ~", note: "誰宛てか分からないときの安全弁", tag: "聞き返し", priority: 1 },
   { id: "PC1105-02", type: "trans", prompt: "つまり、次回ワークブックの12ページをやってくればいいんですね？", answer: "So, you mean we should review page 12 for next time?", lesson: "PC1105", hint: "So, you mean we should ~?", note: "結論だけオウム返し", tag: "確認", priority: 1 },
@@ -3177,7 +3211,7 @@ const JE_QUOTA = 21;
 /* 補充の優先順: RECENT（最近追加した問題）→ PRIORITY_UNITS の英作文 → 文の変形 → 英作文の枠 → その他。
    覚えていない分を順に1周に入れる。ただし最新の段だけで埋めず、OLD_QUOTA 件は一つ前の段以降（少し古めの問題）から混ぜる。
    問題を追加したら RECENT を書き換える */
-const RECENT_LESSONS = [["EC1123", "EC1118", "WB1117", "C1", "WG1117", "V1", "18", "DR1115", "17", "EC1112", "PH1", "unit:indirectq", "unit:reladv", "unit:relpro", "unit:prep", "unit:word", "unit:pp3", "unit:inf4"], ["16", "EC1110", "EC1110B"], "PC1105", ["EC1104", "EC1104B"], "EC1027"]; // "unit:〜" は英作文の単元 // 最近追加したレッスン（先頭ほど先に出す。配列は同じ段）
+const RECENT_LESSONS = [["EC1123B", "EC1123", "EC1118", "WB1117", "C1", "WG1117", "V1", "18", "DR1115", "17", "EC1112", "PH1", "unit:indirectq", "unit:reladv", "unit:relpro", "unit:prep", "unit:word", "unit:pp3", "unit:inf4"], ["16", "EC1110", "EC1110B"], "PC1105", ["EC1104", "EC1104B"], "EC1027"]; // "unit:〜" は英作文の単元 // 最近追加したレッスン（先頭ほど先に出す。配列は同じ段）
 const RECENT_UNITS = ["cushion", "there", "partic", "talk"]; // 最近追加した英作文の単元（レッスンの次）
 const PRIORITY_UNITS = ["can", "ableto", "must", "haveto"];
 /* 1周のうち、最新の段（RECENT_LESSONS の先頭）以外から入れる数と、そのうち同じ段から入れる上限 */
@@ -3185,7 +3219,7 @@ const OLD_QUOTA = 8, OLD_CAP = 4;
 const DECK_RULE = 14;  // 補充ルールの版。変えると次回に1周分を組み直す
 /* 1日に覚える目標数。「今日 あと N」として表示し、ホーム画面のアイコンのバッジにも出す（対応端末のみ） */
 const DAILY_GOAL = 100;
-const APP_VER = "117";   // 診断表示用
+const APP_VER = "118";   // 診断表示用
 
 const UNITS = { ...COMPOSE_UNITS, ...PRON_UNITS, ...QUIZ_UNITS };
 const tagNote = (s) => [s.lesson ? "Lesson " + s.lesson : "", s.tag ? "文法: " + s.tag : "", s.note || ""].filter(Boolean).join(" · ");
