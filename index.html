@@ -3096,6 +3096,51 @@ const QUESTIONS = [
   { id: "EC1123B-S19", type: "blank", prompt: "I prefer eating out, because I'm always ___.", answer: "busy", lesson: "EC1123B", hint: "理由を述べる", note: "prefer A because B", tag: "会話", priority: 2 },
   { id: "EC1123B-S20", type: "blank", prompt: "I don't have to cook, and I don't have to ___ the dishes.", answer: "wash", lesson: "EC1123B", hint: "皿洗い", note: "授業で dishes を使っていた", tag: "会話", priority: 2 },
   { id: "EC1123B-S21", type: "blank", prompt: "Eating out is easy after ___.", answer: "work", lesson: "EC1123B", hint: "after work（仕事の後）", note: "授業で go after work と言っていた", tag: "会話", priority: 3 },
+  // Lesson EC1123C: 和文英訳
+  { id: "EC1123C-01", type: "trans", prompt: "引っ越しの荷造りをしなきゃいけないけど、どこから始めればいいかわからない。", answer: "I need to pack for my move, but I don't know where to start.", lesson: "EC1123C", hint: "where to start＝どこから始めるか", note: "「どこから始めればいいか」は where to start。長文で詰まった箇所", tag: "引っ越し", priority: 1 },
+  // Lesson EC1123C: カタカナ発音
+  { id: "EC1123C-02", type: "kana", prompt: "pack", answer: "[パ]ック", lesson: "EC1123C", hint: "「ア」を伸ばさない", note: "park（パーク）と言い間違えた", tag: "発音", priority: 1 },
+  // Lesson EC1123C: 和文英訳
+  { id: "EC1123C-03", type: "trans", prompt: "使わないものから詰め始めるといいよ。", answer: "First, start packing things that you don't use often.", lesson: "EC1123C", hint: "often＝よく", note: "start の後は -ing（start packing）", tag: "荷造り", priority: 2 },
+  { id: "EC1123C-04", type: "trans", prompt: "残りの荷物は後で詰める方が楽になるよ。", answer: "It'll be easier to pack the rest later.", lesson: "EC1123C", hint: "the rest＝残り", note: "would ではなく will。講師の It'll を使う", tag: "荷造り", priority: 1 },
+  // Lesson EC1123C: 誤文訂正
+  { id: "EC1123C-05", type: "correct", prompt: "I also have so many old clothes and boxes.", answer: "I also have so many old clothes and books.", lesson: "EC1123C", hint: "box＝箱、book＝本", note: "「本」は book。boxes と言い間違えた", tag: "整理", priority: 2 },
+  // Lesson EC1123C: カタカナ発音
+  { id: "EC1123C-06", type: "kana", prompt: "clothes", answer: "[クロ]ウズ", lesson: "EC1123C", hint: "th は発音しない。語末は「ズ」", note: "Browse（ブラウズ）と混同。講師から訂正された", tag: "発音", priority: 1 },
+  // Lesson EC1123C: 和文英訳
+  { id: "EC1123C-07", type: "trans", prompt: "必要なくなったものは寄付してもいいよ。", answer: "Maybe you can donate what you don't need anymore.", lesson: "EC1123C", hint: "donate＝寄付する", note: "what you don't need anymore＝もう必要ないもの", tag: "寄付", priority: 1 },
+  // Lesson EC1123C: カタカナ発音
+  { id: "EC1123C-08", type: "kana", prompt: "donate", answer: "[ド]ウネイト", lesson: "EC1123C", hint: "最初は「ドウ」に近い", note: "「ドネイト」と言わない", tag: "発音", priority: 2 },
+  // Lesson EC1123C: 和文英訳
+  { id: "EC1123C-09", type: "trans", prompt: "他の人が使えるものを譲るのは、いつも良いことです。", answer: "It's always good to give away what others might use.", lesson: "EC1123C", hint: "give away＝譲る", note: "giveaway は名詞。動詞は2語の give away。Eva Wei と言い間違えた", tag: "譲る", priority: 1 },
+  // Lesson EC1123C: 穴埋め
+  { id: "EC1123C-10", type: "blank", prompt: "It's always good to give ___ what others might use.", answer: "away", lesson: "EC1123C", hint: "副詞を入れる", note: "give away＝譲る（2語で1つの動詞句）", tag: "譲る", priority: 2 },
+  // Lesson EC1123C: 和文英訳
+  { id: "EC1123C-11", type: "trans", prompt: "他の人にとって役に立つもの", answer: "what might be useful for someone else", lesson: "EC1123C", hint: "useful＝役に立つ", note: "講師は what others might use を what other people could find useful と言い換えた", tag: "譲る", priority: 2 },
+  { id: "EC1123C-12", type: "trans", prompt: "「混ぜる」を英語で言うと？", answer: "blend", lesson: "EC1123C", hint: "b の音をはっきり", note: "Land と言い間違えた", tag: "語彙", priority: 1 },
+  // Lesson EC1123C: カタカナ発音
+  { id: "EC1123C-13", type: "kana", prompt: "recycle", answer: "リー[サイ]クル", lesson: "EC1123C", hint: "「リー」を伸ばし、cy を強めに", note: "2語目の cy を強めに", tag: "発音", priority: 3 },
+  { id: "EC1123C-14", type: "kana", prompt: "giveaway", answer: "[ギ]ブアウェイ", lesson: "EC1123C", hint: "Gi の g は濁らせて発音", note: "Eva Wei と聞こえた", tag: "発音", priority: 2 },
+  { id: "EC1123C-15", type: "kana", prompt: "throw away", answer: "スロウ ア[ウェ]イ", lesson: "EC1123C", hint: "th は「ス」", note: "th は舌先を歯の間に置く", tag: "発音", priority: 2 },
+  // Lesson EC1123C: 和文英訳
+  { id: "EC1123C-16", type: "trans", prompt: "何カ月も使っていないもの", answer: "what you haven't used in months", lesson: "EC1123C", hint: "in months＝何カ月も", note: "for months と混同しない", tag: "不用品", priority: 2 },
+  { id: "EC1123C-17", type: "trans", prompt: "壊れて使えなくなったもの", answer: "what no longer works", lesson: "EC1123C", hint: "no longer＝もう〜ない", note: "講師に「その語を使っていない」と指摘された", tag: "不用品", priority: 1 },
+  { id: "EC1123C-18", type: "trans", prompt: "場所を取りすぎるもの", answer: "what takes up too much space", lesson: "EC1123C", hint: "take up＝占める", note: "「場所を取る」は take up space", tag: "不用品", priority: 2 },
+  { id: "EC1123C-19", type: "trans", prompt: "簡単に買い替えられるもの", answer: "what you can easily replace", lesson: "EC1123C", hint: "replace＝買い替える", note: "穴埋めで使うと自然", tag: "不用品", priority: 2 },
+  { id: "EC1123C-20", type: "trans", prompt: "私は普段、使わなくなったものは捨てています。", answer: "I usually throw away things that I don't use anymore.", lesson: "EC1123C", hint: "throw away＝捨てる", note: "throw out でも可だが、throw away の方が自然", tag: "会話", priority: 2 },
+  { id: "EC1123C-21", type: "trans", prompt: "1つ買ったら、古いものを2つ捨てるのが私のルールです。", answer: "As a rule, when I buy one item, I throw away two items.", lesson: "EC1123C", hint: "as a rule＝ルールとして", note: "話の途中で言葉に詰まった", tag: "会話", priority: 1 },
+  { id: "EC1123C-22", type: "trans", prompt: "持ち物は減るはずなのに、実際は増え続けています。", answer: "The things I have should decrease, but actually they keep increasing.", lesson: "EC1123C", hint: "keep＋-ing＝〜し続ける", note: "「増えている」は increasing の前に keep", tag: "会話", priority: 1 },
+  // Lesson EC1123C: 穴埋め
+  { id: "EC1123C-23", type: "blank", prompt: "I need to ___ my books, but I don't know what to keep.", answer: "organize", lesson: "EC1123C", hint: "整理する", note: "綴りに注意", tag: "整理", priority: 2 },
+  { id: "EC1123C-24", type: "blank", prompt: "Start ___ the things that you don't usually use.", answer: "cleaning", lesson: "EC1123C", hint: "掃除する", note: "start の後は -ing。packing（詰める）も入る", tag: "掃除", priority: 1 },
+  // Lesson EC1123C: 和文英訳
+  { id: "EC1123C-25", type: "trans", prompt: "引っ越しトラックを手配しないといけないけど、誰に頼めばいいかわからない。", answer: "I need to arrange a moving truck, but I don't know who to ask for help.", lesson: "EC1123C", hint: "who to ask for help＝誰に頼めばいいか", note: "〈疑問詞＋to＋動詞〉の形", tag: "引っ越し", priority: 1 },
+  { id: "EC1123C-26", type: "trans", prompt: "部屋を掃除しないといけないけど、早く終わらせる方法がわからない。", answer: "I need to clean the apartment, but I don't know how to do it quickly.", lesson: "EC1123C", hint: "how to do it＝やり方", note: "how to do it quickly の語順", tag: "掃除", priority: 1 },
+  { id: "EC1123C-27", type: "trans", prompt: "家具をいくつか売らないといけないけど、何を残すかわからない。", answer: "I need to sell some furniture, but I don't know what to keep.", lesson: "EC1123C", hint: "what to keep＝残すべきもの", note: "講師の説明：残したいもの・捨てたくないもの", tag: "家具", priority: 1 },
+  // Lesson EC1123C: カタカナ発音
+  { id: "EC1123C-28", type: "kana", prompt: "furniture", answer: "[ファ]ーニチャー", lesson: "EC1123C", hint: "「ファー」を強く伸ばす", note: "sell some furniture の中で使う", tag: "発音", priority: 3 },
+  { id: "EC1123C-29", type: "kana", prompt: "truck", answer: "ト[ラ]ック", lesson: "EC1123C", hint: "「ラ」を強めに", note: "引っ越し関連の語", tag: "発音", priority: 3 },
+  { id: "EC1123C-30", type: "kana", prompt: "months", answer: "[マ]ンス", lesson: "EC1123C", hint: "th は「ス」", note: "Months. In months. と言い直した", tag: "発音", priority: 2 },
   // Lesson PC1105: 和文英訳
   { id: "PC1105-01", type: "trans", prompt: "すみません、今のお話は私宛てでしたか、それとも娘宛てでしたか？", answer: "Sorry, was that for me or for my daughter?", lesson: "PC1105", hint: "was that for ~ or ~", note: "誰宛てか分からないときの安全弁", tag: "聞き返し", priority: 1 },
   { id: "PC1105-02", type: "trans", prompt: "つまり、次回ワークブックの12ページをやってくればいいんですね？", answer: "So, you mean we should review page 12 for next time?", lesson: "PC1105", hint: "So, you mean we should ~?", note: "結論だけオウム返し", tag: "確認", priority: 1 },
@@ -3211,7 +3256,7 @@ const JE_QUOTA = 21;
 /* 補充の優先順: RECENT（最近追加した問題）→ PRIORITY_UNITS の英作文 → 文の変形 → 英作文の枠 → その他。
    覚えていない分を順に1周に入れる。ただし最新の段だけで埋めず、OLD_QUOTA 件は一つ前の段以降（少し古めの問題）から混ぜる。
    問題を追加したら RECENT を書き換える */
-const RECENT_LESSONS = [["EC1123B", "EC1123", "EC1118", "WB1117", "C1", "WG1117", "V1", "18", "DR1115", "17", "EC1112", "PH1", "unit:indirectq", "unit:reladv", "unit:relpro", "unit:prep", "unit:word", "unit:pp3", "unit:inf4"], ["16", "EC1110", "EC1110B"], "PC1105", ["EC1104", "EC1104B"], "EC1027"]; // "unit:〜" は英作文の単元 // 最近追加したレッスン（先頭ほど先に出す。配列は同じ段）
+const RECENT_LESSONS = [["EC1123C", "EC1123B", "EC1123", "EC1118", "WB1117", "C1", "WG1117", "V1", "18", "DR1115", "17", "EC1112", "PH1", "unit:indirectq", "unit:reladv", "unit:relpro", "unit:prep", "unit:word", "unit:pp3", "unit:inf4"], ["16", "EC1110", "EC1110B"], "PC1105", ["EC1104", "EC1104B"], "EC1027"]; // "unit:〜" は英作文の単元 // 最近追加したレッスン（先頭ほど先に出す。配列は同じ段）
 const RECENT_UNITS = ["cushion", "there", "partic", "talk"]; // 最近追加した英作文の単元（レッスンの次）
 const PRIORITY_UNITS = ["can", "ableto", "must", "haveto"];
 /* 1周のうち、最新の段（RECENT_LESSONS の先頭）以外から入れる数と、そのうち同じ段から入れる上限 */
@@ -3219,7 +3264,7 @@ const OLD_QUOTA = 8, OLD_CAP = 4;
 const DECK_RULE = 14;  // 補充ルールの版。変えると次回に1周分を組み直す
 /* 1日に覚える目標数。「今日 あと N」として表示し、ホーム画面のアイコンのバッジにも出す（対応端末のみ） */
 const DAILY_GOAL = 100;
-const APP_VER = "118";   // 診断表示用
+const APP_VER = "119";   // 診断表示用
 
 const UNITS = { ...COMPOSE_UNITS, ...PRON_UNITS, ...QUIZ_UNITS };
 const tagNote = (s) => [s.lesson ? "Lesson " + s.lesson : "", s.tag ? "文法: " + s.tag : "", s.note || ""].filter(Boolean).join(" · ");
