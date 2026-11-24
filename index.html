@@ -2190,6 +2190,41 @@ const QUESTIONS = [
   { id: "C1-78", type: "kana", prompt: "process orders", answer: "[プラ]セス [オ]ーダーズ", lesson: "C1", hint: "PRO-cess", note: "「process all the」と聞こえた。orders の語尾 z まで言う", tag: "IT Support", priority: 1 },
   { id: "C1-79", type: "kana", prompt: "department", answer: "ディ[パ]ートメント", lesson: "C1", hint: "de-PART-ment", note: "「development」と読んだ", tag: "IT Support", priority: 2 },
   { id: "C1-80", type: "kana", prompt: "persisted", answer: "パー[シ]スティッド", lesson: "C1", hint: "per-SIST-ed", note: "「Passed it」「assisted」と聞こえた", tag: "IT Support", priority: 2 },
+  // Lesson D1: 和文英訳
+  { id: "D1-01", type: "trans", prompt: "患者さんが直前でキャンセルしたと思っていたけど、実は受付がミスしただけだった。それで結局、書類仕事を片付けることになった。", answer: "I thought a patient had canceled at the last minute, but it turns out the front desk just made a mistake. So I ended up catching up on paperwork.", lesson: "D1", hint: "it turns out / end up ～ing / catch up on paperwork", note: "「思っていた」のは過去より前の話なので had canceled。「staff made a mistake」は誰か不明確なので the front desk に", tag: "It turns out / end up", priority: 1 },
+  { id: "D1-02", type: "trans", prompt: "新しいiPhoneに乗り換えたけど、正直、まだ設定の仕方が分からない。", answer: "I just switched to a new iPhone, but to be honest, I still haven't figured out how to set it up.", lesson: "D1", hint: "switch to / to be honest / haven't figured out how to ～", note: "最初の回答は「I change my phone to new iphone duo」でブロックを使えなかった", tag: "To be honest / figure out", priority: 1 },
+  { id: "D1-03", type: "trans", prompt: "正直、新しいスマホの設定がどうしても分からない。", answer: "To be honest, I can't figure out the settings on my new phone.", lesson: "D1", hint: "To be honest, / can't figure out", note: "「To be honest but」と but でつないだ。To be honest は文頭の前置きでカンマで区切る", tag: "To be honest / figure out", priority: 1 },
+  { id: "D1-04", type: "trans", prompt: "A: どうして今日はこんなに空いてるの？ B: 近くで大きなイベントがあるんだよ。 A: ああ、なるほど。", answer: "A: How come it's so quiet today? B: Oh, there's a big event nearby. A: Ah, that makes sense.", lesson: "D1", hint: "How come + 主語＋動詞 / nearby", note: "How come の後の語順は正しくできた。「patients are fewer」は比較に聞こえる", tag: "How come / That makes sense", priority: 1 },
+  { id: "D1-05", type: "trans", prompt: "今週中に修繕の見積もりを送っていただけないかと思いまして。", answer: "I was wondering if you could send me the estimate for the repairs by the end of this week.", lesson: "D1", hint: "I was wondering if you could ～ / by the end of this week", note: "「if you send」と could が抜けた。丁寧なお願いは could 必須", tag: "I was wondering if / get back to", priority: 1 },
+  { id: "D1-06", type: "trans", prompt: "承知しました、確認して折り返します。", answer: "Sure, let me check and I'll get back to you.", lesson: "D1", hint: "let me check / get back to you", note: "「right after I confirm it」と言った。confirm は「確定する」寄り。確認でき次第なら once I've checked", tag: "I was wondering if / get back to", priority: 2 },
+  { id: "D1-07", type: "trans", prompt: "いいね！あ、待って、やっぱりいいや。今夜は家族会議があることになってるんだ。また今度でいい？", answer: "Sounds great! Oh wait, never mind. I'm supposed to have a family meeting tonight. Can I take a rain check?", lesson: "D1", hint: "Sounds great / never mind / be supposed to + 動詞 / rain check", note: "「I'm supposed to family meeting」と動詞が抜けた。「Let's do other day」→ another day、または rain check", tag: "I'm supposed to / Never mind", priority: 1 },
+  { id: "D1-08", type: "trans", prompt: "A: 来月の融資に間に合いそうですか？ B: 間に合うかどうか分かりません。税理士がいつ決算書を送ってくれるか次第です。", answer: "A: Will everything be ready in time for the loan next month? B: I'm not sure if I can make it. It depends on when my tax accountant sends me the financial statements.", lesson: "D1", hint: "in time for / make it / It depends on when ～ / financial statements", note: "It depends on when ～ は正しく作れた。質問は「Will you have done until loan」と言い、until（継続）は不適", tag: "I'm not sure if / It depends on", priority: 1 },
+  // Lesson D1: 穴埋め
+  { id: "D1-09", type: "blank", prompt: "I thought the patient had canceled, but it ( ) ( ) the front desk made a mistake.", answer: "turns out", lesson: "D1", hint: "実はそうだったと分かった", tag: "It turns out / end up", priority: 2 },
+  { id: "D1-10", type: "blank", prompt: "So I ( ) ( ) catching up on paperwork.", answer: "ended up", lesson: "D1", hint: "結局〜することになった（後ろは -ing）", tag: "It turns out / end up", priority: 2 },
+  { id: "D1-11", type: "blank", prompt: "How come ( ) so quiet today?", answer: "it's", lesson: "D1", hint: "How come の後は肯定文の語順", note: "Why is it ～? と同じ意味だが倒置しない", tag: "How come / That makes sense", priority: 1 },
+  { id: "D1-12", type: "blank", prompt: "I was wondering if you ( ) send me the estimate.", answer: "could", lesson: "D1", hint: "丁寧なお願いの助動詞", note: "実際の回答では抜けた", tag: "I was wondering if / get back to", priority: 1 },
+  { id: "D1-13", type: "blank", prompt: "I'm supposed to ( ) a family meeting tonight.", answer: "have", lesson: "D1", hint: "supposed to の後は動詞の原形", note: "実際の回答では動詞が抜けた", tag: "I'm supposed to / Never mind", priority: 1 },
+  { id: "D1-14", type: "blank", prompt: "It depends on when my tax accountant ( ) me the financial statements.", answer: "sends", lesson: "D1", hint: "三人称単数", note: "実際の回答では send と言った", tag: "I'm not sure if / It depends on", priority: 2 },
+  // Lesson D1: 誤文訂正
+  { id: "D1-15", type: "correct", prompt: "There is big event nearly.", answer: "There's a big event nearby.", lesson: "D1", hint: "冠詞と「近く」の単語", note: "nearly は「ほとんど」。近くで＝nearby。a も抜けていた", tag: "How come / That makes sense", priority: 1 },
+  { id: "D1-16", type: "correct", prompt: "So I ended up dealing with documents while I free time.", answer: "So I ended up catching up on paperwork during my free time.", lesson: "D1", hint: "while の後は主語＋動詞", note: "名詞を続けるなら during。書類仕事は paperwork", tag: "It turns out / end up", priority: 2 },
+  { id: "D1-17", type: "correct", prompt: "To be honest but I dont figure out setting.", answer: "To be honest, I can't figure out the settings.", lesson: "D1", hint: "前置きの区切り方と時制", note: "To be honest はカンマで区切る。don't figure out は不自然 → can't / haven't figured out。設定は the settings", tag: "To be honest / figure out", priority: 1 },
+  { id: "D1-18", type: "correct", prompt: "Please send estimate for renovation to me in this weekend.", answer: "Please send me the estimate for the repairs by the end of this week.", lesson: "D1", hint: "冠詞・前置詞", note: "in this weekend は不可。今週中＝by the end of this week", tag: "I was wondering if / get back to", priority: 2 },
+  { id: "D1-19", type: "correct", prompt: "Let's do other day.", answer: "Let's do it another day.", lesson: "D1", hint: "目的語と「別の日」", note: "it が抜け、other day は不可", tag: "I'm supposed to / Never mind", priority: 2 },
+  { id: "D1-20", type: "correct", prompt: "It depends on when tax accounting send me report.", answer: "It depends on when my tax accountant sends me the financial statements.", lesson: "D1", hint: "人を表す語・三単現・決算書", note: "accounting は会計業務。人は accountant。決算書は financial statements", tag: "I'm not sure if / It depends on", priority: 1 },
+  { id: "D1-21", type: "correct", prompt: "I'm not sure if I could do in time.", answer: "I'm not sure if I can make it in time.", lesson: "D1", hint: "「間に合う」の定番表現", note: "do だけでは何をするか不明。make it in time", tag: "I'm not sure if / It depends on", priority: 2 },
+  // Lesson D1: カタカナ発音
+  { id: "D1-22", type: "kana", prompt: "it turns out", answer: "イッ[ター]ンザウ(ト)", lesson: "D1", hint: "turns_out をつなげる", note: "turns の s と out がくっつく", tag: "It turns out / end up", priority: 2 },
+  { id: "D1-23", type: "kana", prompt: "ended up / catching up on", answer: "[エ]ンディダップ / [キャ]ッチンガッポン", lesson: "D1", hint: "d と up、ng と up、p と on をつなげる", tag: "It turns out / end up", priority: 2 },
+  { id: "D1-24", type: "kana", prompt: "To be honest", answer: "トゥビー[オ]ネスト", lesson: "D1", hint: "honest の h は発音しない", tag: "To be honest / figure out", priority: 1 },
+  { id: "D1-25", type: "kana", prompt: "figure out / set it up", answer: "[フィ]ギャーラウ(ト) / セリ[ラ]ップ", lesson: "D1", hint: "t が軽い「ら」の音", tag: "To be honest / figure out", priority: 2 },
+  { id: "D1-26", type: "kana", prompt: "How come it's", answer: "ハウ[カ]ミッツ", lesson: "D1", hint: "come_it's をつなげる", tag: "How come / That makes sense", priority: 2 },
+  { id: "D1-27", type: "kana", prompt: "makes sense", answer: "メイク[セ]ンス", lesson: "D1", hint: "s が2つ続くので1つにまとめる", tag: "How come / That makes sense", priority: 3 },
+  { id: "D1-28", type: "kana", prompt: "I was wondering if you could send me", answer: "アイワズ[ワ]ンダリンギフユークッ[セ]ンミ", lesson: "D1", hint: "wondering_if をつなげ、could の d は消える", tag: "I was wondering if / get back to", priority: 1 },
+  { id: "D1-29", type: "kana", prompt: "I'm supposed to have a", answer: "アイムサ[ポ]ウスタ[ハ]ヴァ", lesson: "D1", hint: "supposed の d は消える", tag: "I'm supposed to / Never mind", priority: 1 },
+  { id: "D1-30", type: "kana", prompt: "Can I take a rain check?", answer: "キャナイテイカ[レ]インチェック", lesson: "D1", hint: "Can_I / take_a をつなげる", tag: "I'm supposed to / Never mind", priority: 2 },
+  { id: "D1-31", type: "kana", prompt: "I'm not sure if I can make it", answer: "アイムノッ[シュ]アリフアイキャン[メ]イキッ(ト)", lesson: "D1", hint: "sure_if / make_it をつなげる", tag: "I'm not sure if / It depends on", priority: 2 },
   // Lesson T1: 文の変形
   { id: "T1-01", type: "transform", prompt: "He plays baseball every Sunday. ⇒ yesterday", answer: "He played baseball yesterday.", lesson: "T1", hint: "過去形に", note: "every Sunday → yesterday で時制が変わる", tag: "時制", priority: 1 },
   { id: "T1-02", type: "transform", prompt: "He played baseball yesterday. ⇒ watch", answer: "He watched baseball yesterday.", lesson: "T1", hint: "動詞を置き換え", note: "play → watch。時制はそのまま", tag: "動詞", priority: 1 },
@@ -3286,7 +3321,7 @@ const JE_QUOTA = 21;
 /* 補充の優先順: RECENT（最近追加した問題）→ PRIORITY_UNITS の英作文 → 文の変形 → 英作文の枠 → その他。
    覚えていない分を順に1周に入れる。ただし最新の段だけで埋めず、OLD_QUOTA 件は一つ前の段以降（少し古めの問題）から混ぜる。
    問題を追加したら RECENT を書き換える */
-const RECENT_LESSONS = [["DR360", "EC1123C", "EC1123B", "EC1123", "EC1118", "WB1117", "C1", "WG1117", "V1", "18", "DR1115", "17", "EC1112", "PH1", "unit:indirectq", "unit:reladv", "unit:relpro", "unit:prep", "unit:word", "unit:pp3", "unit:inf4"], ["16", "EC1110", "EC1110B"], "PC1105", ["EC1104", "EC1104B"], "EC1027"]; // "unit:〜" は英作文の単元 // 最近追加したレッスン（先頭ほど先に出す。配列は同じ段）
+const RECENT_LESSONS = [["D1", "DR360", "EC1123C", "EC1123B", "EC1123", "EC1118", "WB1117", "C1", "WG1117", "V1", "18", "DR1115", "17", "EC1112", "PH1", "unit:indirectq", "unit:reladv", "unit:relpro", "unit:prep", "unit:word", "unit:pp3", "unit:inf4"], ["16", "EC1110", "EC1110B"], "PC1105", ["EC1104", "EC1104B"], "EC1027"]; // "unit:〜" は英作文の単元 // 最近追加したレッスン（先頭ほど先に出す。配列は同じ段）
 const RECENT_UNITS = ["cushion", "there", "partic", "talk"]; // 最近追加した英作文の単元（レッスンの次）
 const PRIORITY_UNITS = ["can", "ableto", "must", "haveto"];
 /* 1周のうち、最新の段（RECENT_LESSONS の先頭）以外から入れる数と、そのうち同じ段から入れる上限 */
@@ -3294,7 +3329,7 @@ const OLD_QUOTA = 8, OLD_CAP = 4;
 const DECK_RULE = 14;  // 補充ルールの版。変えると次回に1周分を組み直す
 /* 1日に覚える目標数。「今日 あと N」として表示し、ホーム画面のアイコンのバッジにも出す（対応端末のみ） */
 const DAILY_GOAL = 100;
-const APP_VER = "120";   // 診断表示用
+const APP_VER = "121";   // 診断表示用
 
 const UNITS = { ...COMPOSE_UNITS, ...PRON_UNITS, ...QUIZ_UNITS };
 const tagNote = (s) => [s.lesson ? "Lesson " + s.lesson : "", s.tag ? "文法: " + s.tag : "", s.note || ""].filter(Boolean).join(" · ");
