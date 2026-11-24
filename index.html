@@ -2509,6 +2509,36 @@ const QUESTIONS = [
   { id: "DR1115-22", type: "kana", prompt: "withdrawal", answer: "ウィズ[ドロ]ーアル", lesson: "DR1115", hint: "ドローを強く", note: "th は濁る音。drawal を「ドロー」と伸ばす", tag: "発音", priority: 2 },
   { id: "DR1115-23", type: "kana", prompt: "prescription", answer: "プリス[クリ]プション", lesson: "DR1115", hint: "スクリを強く", note: "pre は「プレ」でなく「プリ」", tag: "発音", priority: 2 },
   { id: "DR1115-24", type: "kana", prompt: "tablet", answer: "[タ]ブリット", lesson: "DR1115", hint: "タを強く", note: "英語の発音は「タブレット」より「タブリット」に近い", tag: "発音", priority: 2 },
+  // Lesson DR360: 和文英訳
+  { id: "DR360-01", type: "trans", prompt: "正直なところ、どうやってこの問題を解決すればいいのかまだ分かっていません。", answer: "To be honest, I still haven't figured out how to solve this problem.", lesson: "DR360", hint: "To be honest, ＋ figure out", note: "切り出し＋万能動詞。To be honest,（切り出し）＋ figure out（答え・方法を見つけ出す）の超頻出コンビ", tag: "Drill", priority: 1 },
+  { id: "DR360-02", type: "trans", prompt: "実はね、電車に乗り遅れて、結局オフィスまで歩いて行くことになったんだ。", answer: "The thing is, I missed my train and ended up walking to the office.", lesson: "DR360", hint: "The thing is, ＋ end up -ing", note: "The thing is,（実は・要するに）で切り出し、end up＋動詞-ing（結局〜する羽目になる）でオチをつける", tag: "Drill", priority: 1 },
+  { id: "DR360-03", type: "trans", prompt: "明日の会議はオンラインになることが分かったので、リンクを確認しておきます。", answer: "It turns out that tomorrow's meeting will be online, so I'll make sure to check the link.", lesson: "DR360", hint: "It turns out that ＋ make sure", note: "It turns out that 〜（〜だと判明した）は新事実を共有するときのブロック", tag: "Drill", priority: 1 },
+  { id: "DR360-04", type: "trans", prompt: "最初は忙しかったけれど、今では新しいスケジュールにすっかり慣れました。", answer: "It was busy at first, but now I've completely gotten used to the new schedule.", lesson: "DR360", hint: "have gotten used to", note: "get used to＋名詞/-ing を現在完了にすると「もう慣れたよ」という今の状態を表せる", tag: "Drill", priority: 1 },
+  { id: "DR360-05", type: "trans", prompt: "少し空気を入れるために、窓を開けても構いませんか？", answer: "Do you mind if I open the window to let some fresh air in?", lesson: "DR360", hint: "Do you mind if I ＋ 動詞原形?", note: "同僚にも友人にも使える、角の立たない許可表現", tag: "Drill", priority: 1 },
+  { id: "DR360-06", type: "trans", prompt: "どうして今日はそんなに早くオフィスを出るの？", answer: "How come you are leaving the office so early today?", lesson: "DR360", hint: "How come ＋ S ＋ V?", note: "Why are you 〜? より柔らかい「なんで〜なの？」。後ろは肯定文の語順（you are）", tag: "Drill", priority: 1 },
+  { id: "DR360-07", type: "trans", prompt: "少し休憩を取って、コーヒーでも飲みに行きませんか？", answer: "Why don't we take a quick break and grab a cup of coffee?", lesson: "DR360", hint: "Why don't we ＋ 動詞原形?", note: "grab a cup of coffee＝サッとコーヒーを飲む（ドラマで毎日出る表現）", tag: "Drill", priority: 1 },
+  { id: "DR360-08", type: "trans", prompt: "今回の新しいプロジェクトはうまくいくような気がしています。", answer: "I have a feeling that this new project is going to work out well.", lesson: "DR360", hint: "I have a feeling that ＋ work out", note: "work out＝うまくいく・解決する（万能句動詞）", tag: "Drill", priority: 1 },
+  { id: "DR360-09", type: "trans", prompt: "なるほど、完全に納得がいくよ。だからみんなそのアイデアに賛成しているんだね。", answer: "That makes total sense. That's why everyone agrees with that idea.", lesson: "DR360", hint: "That makes total sense. ＋ That's why", note: "That's why＋S＋V（だから〜なんだね）で、相手の説明を受けて理解を返せる", tag: "Drill", priority: 1 },
+  { id: "DR360-10", type: "trans", prompt: "どのレストランに行くかは完全に君次第だよ。僕は何でも大丈夫！", answer: "It's totally up to you which restaurant we go to. I'm fine with anything!", lesson: "DR360", hint: "It's totally up to you ＋ I'm fine with anything", note: "be up to you（あなた次第）＋ I'm fine with anything（何でもいいよ）は鉄板ペア", tag: "Drill", priority: 1 },
+  { id: "DR360-11", type: "trans", prompt: "本当に？それはまったく予想していなかったよ！", answer: "Seriously? I didn't see that coming at all!", lesson: "DR360", hint: "I didn't see that coming", note: "驚いたときの決まり文句", tag: "Drill", priority: 1 },
+  { id: "DR360-12", type: "trans", prompt: "もし予定が変わったら、いつでも気軽にメッセージで知らせてね。", answer: "Let me know if your plans change, and feel free to text me anytime.", lesson: "DR360", hint: "Let me know if ＋ feel free to", note: "Let me know if 〜 ＋ feel free to 〜 で、温かい会話の締めくくりが作れる", tag: "Drill", priority: 1 },
+  { id: "DR360-13", type: "trans", prompt: "正直なところ、最初はアプリの使い方が分からなかったけど、結局2日で慣れたよ。", answer: "To be honest, I couldn't figure out how to use this app at first, but I ended up getting used to it in two days.", lesson: "DR360", hint: "切り出し＋万能動詞＋結果", note: "3つのブロック（To be honest, ／ couldn't figure out ／ ended up getting used to）をつなぐ例", tag: "ブロック連結", priority: 1 },
+  { id: "DR360-14", type: "trans", prompt: "「正直なところ、〜」を英語で言うと？（切り出し）", answer: "To be honest,", lesson: "DR360", hint: "Block A 切り出し", note: "頭にポンと置くだけで会話が自然になるクッション言葉", tag: "Block A", priority: 2 },
+  { id: "DR360-15", type: "trans", prompt: "「〜な気がする」を英語で言うと？（切り出し）", answer: "I have a feeling that ~", lesson: "DR360", hint: "Block A 切り出し", note: "that の後ろは S＋V", tag: "Block A", priority: 2 },
+  { id: "DR360-16", type: "trans", prompt: "「実は・要するに、〜」を英語で言うと？（切り出し）", answer: "The thing is, ~", lesson: "DR360", hint: "Block A 切り出し", note: "言いにくいことを切り出すときにも使う", tag: "Block A", priority: 2 },
+  { id: "DR360-17", type: "trans", prompt: "「結局〜だと分かった」を英語で言うと？（切り出し）", answer: "It turns out that ~", lesson: "DR360", hint: "Block A 切り出し", note: "新事実を共有するとき", tag: "Block A", priority: 2 },
+  { id: "DR360-18", type: "trans", prompt: "「（問題・答えを）解決する・理解する」を英語で言うと？（万能動詞）", answer: "figure out", lesson: "DR360", hint: "Block B 万能動詞", note: "solve / understand の代わりに使える", tag: "Block B", priority: 2 },
+  { id: "DR360-19", type: "trans", prompt: "「結局〜することになる」を英語で言うと？（万能動詞）", answer: "end up -ing", lesson: "DR360", hint: "Block B 万能動詞", note: "後ろは動詞の -ing", tag: "Block B", priority: 2 },
+  { id: "DR360-20", type: "trans", prompt: "「確実に〜する」を英語で言うと？（万能動詞）", answer: "make sure", lesson: "DR360", hint: "Block B 万能動詞", note: "make sure ＋ S ＋ V、make sure to ＋ 動詞", tag: "Block B", priority: 2 },
+  { id: "DR360-21", type: "trans", prompt: "「〜に慣れる」を英語で言うと？（万能動詞）", answer: "get used to", lesson: "DR360", hint: "Block B 万能動詞", note: "後ろは名詞か -ing（to の後でも原形にしない）", tag: "Block B", priority: 2 },
+  { id: "DR360-22", type: "trans", prompt: "「〜してもいい？」と許可を求めるときは？（相手への働きかけ）", answer: "Do you mind if I ~?", lesson: "DR360", hint: "Block C 相手への働きかけ", note: "後ろは動詞の原形", tag: "Block C", priority: 2 },
+  { id: "DR360-23", type: "trans", prompt: "「どうして〜なの？」とカジュアルに聞くときは？（相手への働きかけ）", answer: "How come ~?", lesson: "DR360", hint: "Block C 相手への働きかけ", note: "How come の後ろは疑問文の語順ではなく S＋V のまま", tag: "Block C", priority: 2 },
+  { id: "DR360-24", type: "trans", prompt: "「一緒に〜しない？」と提案するときは？（相手への働きかけ）", answer: "Why don't we ~?", lesson: "DR360", hint: "Block C 相手への働きかけ", note: "後ろは動詞の原形", tag: "Block C", priority: 2 },
+  { id: "DR360-25", type: "trans", prompt: "「もし〜なら教えて」を英語で言うと？（相手への働きかけ）", answer: "Let me know if ~", lesson: "DR360", hint: "Block C 相手への働きかけ", note: "if の後ろは S＋V", tag: "Block C", priority: 2 },
+  { id: "DR360-26", type: "trans", prompt: "「完全に納得いくよ」を英語で言うと？（リアクション）", answer: "That makes total sense.", lesson: "DR360", hint: "Block D 感情・リアクション", note: "相づちを最初に言ってから自分の意見をつなげる", tag: "Block D", priority: 2 },
+  { id: "DR360-27", type: "trans", prompt: "「それは予想外だった」を英語で言うと？（リアクション）", answer: "I didn't see that coming.", lesson: "DR360", hint: "Block D 感情・リアクション", note: "驚いたときの決まり文句", tag: "Block D", priority: 2 },
+  { id: "DR360-28", type: "trans", prompt: "「完全に君次第だよ」を英語で言うと？（リアクション）", answer: "It's totally up to you.", lesson: "DR360", hint: "Block D 感情・リアクション", note: "判断を相手に委ねる", tag: "Block D", priority: 2 },
+  { id: "DR360-29", type: "trans", prompt: "「〜を楽しみにしている」を英語で言うと？（リアクション）", answer: "I'm looking forward to ~", lesson: "DR360", hint: "Block D 感情・リアクション", note: "to の後ろは名詞か -ing", tag: "Block D", priority: 2 },
   // Lesson EC1027: 和文英訳
   { id: "EC1027-01", type: "trans", prompt: "英語で？：特許", answer: "patent", lesson: "EC1027", hint: "pで始まる", note: "テストで意味が出てこなかった", tag: "単語", priority: 1 },
   { id: "EC1027-02", type: "trans", prompt: "英語で？：（電話を）切る", answer: "hang up", lesson: "EC1027", hint: "hang＋前置詞", note: "「切らずに待つ（hold on）」と混同", tag: "単語", priority: 1 },
@@ -3256,7 +3286,7 @@ const JE_QUOTA = 21;
 /* 補充の優先順: RECENT（最近追加した問題）→ PRIORITY_UNITS の英作文 → 文の変形 → 英作文の枠 → その他。
    覚えていない分を順に1周に入れる。ただし最新の段だけで埋めず、OLD_QUOTA 件は一つ前の段以降（少し古めの問題）から混ぜる。
    問題を追加したら RECENT を書き換える */
-const RECENT_LESSONS = [["EC1123C", "EC1123B", "EC1123", "EC1118", "WB1117", "C1", "WG1117", "V1", "18", "DR1115", "17", "EC1112", "PH1", "unit:indirectq", "unit:reladv", "unit:relpro", "unit:prep", "unit:word", "unit:pp3", "unit:inf4"], ["16", "EC1110", "EC1110B"], "PC1105", ["EC1104", "EC1104B"], "EC1027"]; // "unit:〜" は英作文の単元 // 最近追加したレッスン（先頭ほど先に出す。配列は同じ段）
+const RECENT_LESSONS = [["DR360", "EC1123C", "EC1123B", "EC1123", "EC1118", "WB1117", "C1", "WG1117", "V1", "18", "DR1115", "17", "EC1112", "PH1", "unit:indirectq", "unit:reladv", "unit:relpro", "unit:prep", "unit:word", "unit:pp3", "unit:inf4"], ["16", "EC1110", "EC1110B"], "PC1105", ["EC1104", "EC1104B"], "EC1027"]; // "unit:〜" は英作文の単元 // 最近追加したレッスン（先頭ほど先に出す。配列は同じ段）
 const RECENT_UNITS = ["cushion", "there", "partic", "talk"]; // 最近追加した英作文の単元（レッスンの次）
 const PRIORITY_UNITS = ["can", "ableto", "must", "haveto"];
 /* 1周のうち、最新の段（RECENT_LESSONS の先頭）以外から入れる数と、そのうち同じ段から入れる上限 */
@@ -3264,7 +3294,7 @@ const OLD_QUOTA = 8, OLD_CAP = 4;
 const DECK_RULE = 14;  // 補充ルールの版。変えると次回に1周分を組み直す
 /* 1日に覚える目標数。「今日 あと N」として表示し、ホーム画面のアイコンのバッジにも出す（対応端末のみ） */
 const DAILY_GOAL = 100;
-const APP_VER = "119";   // 診断表示用
+const APP_VER = "120";   // 診断表示用
 
 const UNITS = { ...COMPOSE_UNITS, ...PRON_UNITS, ...QUIZ_UNITS };
 const tagNote = (s) => [s.lesson ? "Lesson " + s.lesson : "", s.tag ? "文法: " + s.tag : "", s.note || ""].filter(Boolean).join(" · ");
@@ -3281,7 +3311,7 @@ const KINDS = {
   compose: { mark: "英", answerLabel: "Answer", color: "#c9412f", sheet: "英文を見る",
              prompt: (s) => s.ja, answer: (s) => esc(s.en), note: () => "", speak: (s) => s.en.replace(/\s*(-ing\s*)?~/g, "") },   // 「~」は読まない
   trans:   { mark: "英", answerLabel: "Answer", color: "#c9412f", sheet: "英文を見る",
-             prompt: (s) => s.prompt, answer: (s) => esc(s.answer), note: tagNote, speak: (s) => stripGloss(s.answer) },
+             prompt: (s) => s.prompt, answer: (s) => esc(s.answer), note: tagNote, speak: (s) => stripGloss(s.answer).replace(/\s*[~～]/g, "").replace(/\s+-ing\b/g, "") },   // 「~」「-ing」は読まない
   pron:    { mark: "カナ", answerLabel: "カタカナ（● は強く）", color: "#2b64c8", sheet: "読み方を見る",
              prompt: (s) => s.en, answer: (s) => kanaHTML(s.kana), note: (s) => s.note || "", speak: (s) => s.en, speakBefore: true },
   correct: { mark: "誤", answerLabel: "正しい形", color: "#d0641c", sheet: "正しい形を見る",
